@@ -8,4 +8,27 @@
 .heroSection{
     height: 100vh;
     width: 100vw;
+    background-image: url("../assets/HeroSectionBackgroundImage.png");
+    background-size: cover;
+    background-position: center;
+}
+.aboutSection{
+    height: 100vh;
+    width: 100vw;
+    background: green;
+}
+.sponsorsSection{
+    height: 10vh;
+    width: 100vw;
+    background: blue;
+}
+.faqSection{
+    height: 50vh;
+    width: 100vw;
+    background: rgb(181, 173, 20);
+}
+.contactSection{
+    height: 50vh;
+    width: 100vw;
+    background: rgb(8, 213, 240);
 }
