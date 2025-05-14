@@ -1,6 +1,7 @@
 import React from "react";
 import './styles/Homepage.css';
 import Navbar from './Navbar';
+import Faq from './components/faq';
 
 export default function Homepage() {
     return (
@@ -18,6 +19,7 @@ export default function Homepage() {
                 </section>
             {/* FAQ Section */}
                 <section className="faqsSection">
+                    <Faq />
                 </section>
             {/* Contact Section */}
                 <section className="contactSection">

@@ -1,0 +1,105 @@
+/*Fonts*/
+@font-face {
+    font-family: 'FAQ Heading';
+    src: url('../fonts/headingFont.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FAQ Questions';
+    src: url('../fonts/generalFont.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/*Sliding down translation*/
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/*Headings*/
+.centered-grey-heading {
+    color: darkgrey;
+    text-align: center;
+    font-size: 16px;
+    padding-top: 40px;
+    font-weight: lighter;
+}
+
+.faq-heading {
+    font-family: 'FAQ Heading', serif;
+    text-align: center;
+    font-size: 70px;
+    background: linear-gradient(90deg,rgba(255, 181, 219, 1) 44%, rgba(158, 177, 244, 1) 55%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/*Grid*/
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: start;
+    margin: auto auto auto 7%;
+}
+
+.faq-item {
+    width: 170%;
+    margin-bottom: 20px;
+}
+
+.faq-question {
+    display: flex;
+
+    font-family: 'FAQ Questions', serif;
+    font-size: 16px;
+    color: white;
+    font-weight: 1;
+    text-align: left;
+    word-wrap: break-word;
+
+    max-width: 50%;
+    border: 2px solid #74648c;
+    border-radius: 12px;
+    background: transparent;
+    padding: 15px;
+
+    transition: all 1s ease;
+}
+
+.faq-answer {
+    font-family: 'FAQ Questions', serif;
+    color: white;
+
+    max-width: 50%;
+    padding: 15px;
+    margin-top: 10px;
+    border: 2px solid #74648c;
+    border-radius: 12px;
+    background: transparent;
+
+    animation: slideDown 0.3s ease-out;
+}
+
+/*Rotating arrow*/
+.faq-question::after {
+    margin-left: auto;
+    content: '>';
+    color: white;
+    font-size: 1.2em;
+    transition: transform 1s ease;
+}
+
+.faq-question.expanded::after {
+    transform: rotate(90deg);
+}
