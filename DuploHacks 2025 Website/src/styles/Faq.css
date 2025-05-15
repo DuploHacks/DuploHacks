@@ -26,7 +26,6 @@
         transform: translateY(0);
     }
 }
-
 /*Headings*/
 .centered-grey-heading {
     color: darkgrey;
@@ -40,7 +39,7 @@
     font-family: 'FAQ Heading', serif;
     text-align: center;
     font-size: 70px;
-    background: linear-gradient(90deg,rgba(255, 181, 219, 1) 44%, rgba(158, 177, 244, 1) 55%);
+    background: linear-gradient(90deg,rgb(250, 2, 130) 44%, rgb(47, 0, 255) 55%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -49,15 +48,16 @@
 .faq-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    align-items: start;
     padding-left: 20px;
     padding-right: 20px;
+    padding-bottom: 50px;
 }
 
 .faq-item {
     width: 100%;
-    margin-bottom: 20px; 
-    padding-left: 1.25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .faq-question {
@@ -65,30 +65,31 @@
     font-family: 'FAQ Questions', serif;
     font-size: 16px;
     color: white;
-    font-weight: 1;
+    font-weight:bolder;
     text-align: left;
     word-wrap: break-word;
-
     width: 90%;
-    height: 100%;
-    border: 2px solid #74648c;
-    border-radius: 12px;
-    background: transparent;
+    height: 32px;
+    border: 9px solid #2a023a;
+    border-radius: 12px 12px 0px 0px;
+    background: #30023c;
     padding: 15px;
+    transition: all 0.1s ease;
+}
 
-    transition: all 1s ease;
+.faq-question:hover {
+    background: #3c024a;
 }
 
 .faq-answer {
     font-family: 'FAQ Questions', serif;
     color: white;
-
-    max-width: 90%;
+    width: 90%;
     padding: 15px;
-    margin-top: 10px;
-    border: 2px solid #74648c;
-    border-radius: 12px;
-    background: transparent;
+    margin-top: 1px;
+    border: 9px solid #2a023a;
+    border-radius: 0px 0px 12px 12px;
+    background: #2a023a;
 
     animation: slideDown 0.3s ease-out;
 }
@@ -97,17 +98,18 @@
 .faq-question::after {
     margin-left: auto;
     content: '>';
-    color: white;
-    font-size: 1.2em;
+    color: rgba(250, 2, 130, 0.232);
+    font-size: 23px;
     transition: transform 0.4s ease-in-out;
 }
 
 .faq-question.expanded::after {
+    color: rgb(250, 2, 130);
     transform: rotate(90deg);
 }
 
 /*Responsive type shi*/
-@media (max-width: 768px) {
+@media (max-width: 970px) {
     .faq-grid {
         grid-template-columns: 1fr;
         margin: 0 auto;
