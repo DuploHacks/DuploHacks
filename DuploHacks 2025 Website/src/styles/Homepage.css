@@ -8,10 +8,21 @@
 .heroSection{
     height: 100vh;
     width: 100vw;
-    background-image: url("../assets/HeroSectionBackgroundImage.png");
+    background-image: url("../assets/HeroSectionBackgroundImage2.png");
     background-size: cover;
     background-position: center;
 }
+/*Responsive type shi*/
+@media (max-width: 900px) {
+    .heroSection {
+        height: 100vh;
+        width: 100vw;
+        background-image: url("../assets/HeroSectionBackgroundImage.png");
+        background-size: cover;
+        background-position: center;
+    }
+}
+
 .aboutSection{
     height: 100vh;
     width: 100vw;
