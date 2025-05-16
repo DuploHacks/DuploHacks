@@ -1,6 +1,7 @@
 import React from "react";
 import './styles/Homepage.css';
 import Navbar from './Navbar';
+import Sponsors from './components/sponsors';
 import Faq from './components/faq';
 
 export default function Homepage() {
@@ -16,6 +17,7 @@ export default function Homepage() {
                 </section>
             {/* Sponsors Section */}
                 <section className="sponsorsSection">
+                    <Sponsors />
                 </section>
             {/* FAQ Section */}
                 <section className="faqsSection">
