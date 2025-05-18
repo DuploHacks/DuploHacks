@@ -1,20 +1,3 @@
-/*Fonts*/
-@font-face {
-  font-family: 'Bauhaus 93';
-  src: url('../fonts/headingFont.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Martian Mono';
-  src: url('../fonts/generalFont.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
 .sponsors-grayheading {
   font-family: 'Martian Mono', 'serif';
   text-align: center;
