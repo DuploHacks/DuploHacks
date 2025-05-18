@@ -1,6 +1,15 @@
+@font-face {
+    font-family: 'GeneralFont';
+    src: url('../fonts/mainFont.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 .navBarWrapper{
     background-color: orange;
     margin: 0;
     padding: 0;
     position: absolute;
+    font-family: 'GeneralFont', sans-serif;
 }
