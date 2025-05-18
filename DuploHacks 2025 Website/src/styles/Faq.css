@@ -28,6 +28,18 @@
     -webkit-text-fill-color: transparent;
 }
 
+.faq-heading-label {
+    font-family: 'Martian Mono', monospace;
+    color: #6b6b6b;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 400;
+    letter-spacing: 0.15em;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    opacity: 0.6;
+}
+
 /*Grid*/
 .faq-grid {
     display: grid;
