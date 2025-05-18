@@ -49,7 +49,7 @@ const Faq = () => {
     };
 
     return (
-        <>
+        <div className="faq-container">
             <div className="centered-grey-heading">
                 [ FREQUENTLY ASKED QUESTIONS ]
             </div>
@@ -79,7 +79,7 @@ const Faq = () => {
                     </div>
                 ))}
             </section>
-        </>
+        </div>
     );
 };
 

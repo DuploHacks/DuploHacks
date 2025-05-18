@@ -35,13 +35,10 @@
     width: 100vw;
     background: #190022;
 }
-.faqSection{
-    height: 80vh;
+.faqAndContactSection{
+    height: 1255px;
     width: 100vw;
-    background: #230135;
-}
-.contactSection{
-    height: 50vh;
-    width: 100vw;
-    background: rgb(8, 213, 240);
+    background-image: url("../assets/ContactBackground.png");
+    background-size: 100%;
+    background-position: bottom;
 }

@@ -3,6 +3,7 @@ import './styles/Homepage.css';
 import Navbar from './Navbar';
 import Sponsors from './components/sponsors';
 import Faq from './components/faq';
+import Contact from './components/contact';
 
 export default function Homepage() {
     return (
@@ -19,12 +20,10 @@ export default function Homepage() {
                 <section className="sponsorsSection">
                     <Sponsors />
                 </section>
-            {/* FAQ Section */}
-                <section className="faqsSection">
+            {/* FAQ Section & Contact Section */}
+                <section className="faqAndContactSection">
                     <Faq />
-                </section>
-            {/* Contact Section */}
-                <section className="contactSection">
+                    <Contact />
                 </section>
         </div>
     );
