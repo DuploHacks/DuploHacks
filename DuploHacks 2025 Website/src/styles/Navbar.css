@@ -6,10 +6,52 @@
     font-display: swap;
 }
 
-.navBarWrapper{
-    background-color: orange;
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    font-family: 'GeneralFont', sans-serif;
+.navBarWrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: rgba(25, 0, 35, 0.5);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.nav-logo {
+    height: 2rem;
+    width: auto;
+}
+
+.nav-left span {
+    color: white;
+    font-family: 'mainFont', sans-serif;
+    font-size: 1.25rem;
+}
+
+.nav-right {
+    display: flex;
+    gap: 2.5rem;
+}
+
+.nav-right a {
+    color: white;
+    text-decoration: none;
+    font-family: 'mainFont', sans-serif;
+    font-size: 1rem;
+    opacity: 0.9;
+    transition: opacity 0.2s;
+}
+
+.nav-right a:hover {
+    opacity: 1;
 }
