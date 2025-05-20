@@ -19,10 +19,10 @@ export default function Navbar() {
                 <span>DuploHacks</span>
             </div>
             <div className="nav-right">
-                <a href="#about">about</a>
-                <a href="#team">team</a>
-                <a href="#sponsors">sponsors</a>
-                <a href="#faq">faq</a>
+                <a className="link" href="#about">about</a>
+                <a className="link" href="#team">team</a>
+                <a className="link" href="#sponsors">sponsors</a>
+                <a className="link" href="#faq">faq</a>
             </div>
         </nav>
     );

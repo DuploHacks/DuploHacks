@@ -32,13 +32,13 @@ export default function Homepage() {
                     </div>
                 </div>
             </section>
-            <section className="aboutSection">
+            <section className="aboutSection" id="about">
                 <About />
             </section>
-            <section className="sponsorsSection">
+            <section className="sponsorsSection" id="sponsors">
                 <Sponsors />
             </section>
-            <section className="faqAndContactSection">
+            <section className="faqAndContactSection" id="faq">
                 <Faq />
                 <Contact />
             </section>

@@ -60,3 +60,25 @@
 .nav-right a:hover {
     color: rgba(255, 255, 255, 0.364);
 }
+
+.link {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0%;
+    height: 2px;
+    background-color: rgba(235, 104, 252, 0.364);
+    transition: width 0.3s;
+    pointer-events: none;
+}
+
+.link:hover::after {
+    width: 100%;
+}
