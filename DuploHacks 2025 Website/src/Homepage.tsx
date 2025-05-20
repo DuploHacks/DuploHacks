@@ -16,15 +16,15 @@ export default function Homepage() {
                     </div>
                     <div className="event-info">
                         <div className="event-location-container">
-                            <span className="icon">⬜</span>
+                            <img className="icon" src="/src/assets/pinicon.png"/>
                             <span className="event-location">200 University Ave, E7</span>
                         </div>
                         <div className="event-details">
                             <div className="event-row">
-                                <span className="icon">📅</span>
+                                <img className="icon" src="/src/assets/calendaricon.png"/>
                                 <span>October 10 - 12th, 2025</span>
                                 <span className="separator">|</span>
-                                <span className="icon clock-icon">⌚</span>
+                                <img className="icon" src="/src/assets/timeicon.png"/>
                                 <span>Applications Coming Soon</span>
                             </div>
                         </div>
