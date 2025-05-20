@@ -106,6 +106,7 @@
     gap: 0.75rem;
     font-family: 'generalFont';
     font-size: 1.1rem;
+    text-align: center;
     color: white;
     letter-spacing: 0.5px;
 }
@@ -170,4 +171,51 @@
 }
 
 @media (max-width: 768px) {
+    .hero-logo {
+        width: 80%;
+        max-width: 500px;
+    }
+
+    .title {
+        font-size: 90px;
+    }
+
+    .event-row {
+        font-size: 0.9rem;
+    }
+
+    .event-location {
+        font-size: 0.9rem;
+    }
+
+    .sponsor-button {
+        padding: 0.5rem 2rem;
+        font-size: 1rem;
+    }
+}
+@media (max-width: 668px) {
+    .hero-logo {
+        width: 80%;
+        max-width: 500px;
+    }
+
+    .title {
+        font-size: 70px;
+    }
+
+    .event-row {
+        font-size: 0.6rem;
+    }
+
+    .event-location {
+        font-size: 0.6rem;
+    }
+
+    .icon{
+        height: 15px;
+    }
+
+    .sponsor-button {
+        font-size: 1rem;
+    }
 }
