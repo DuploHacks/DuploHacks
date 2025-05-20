@@ -170,16 +170,4 @@
 }
 
 @media (max-width: 768px) {
-    .hero-logo {
-        max-width: 400px;
-    }
-
-    .event-details {
-        flex-direction: column;
-        gap: 0.5rem;
-    }
-
-    .event-info {
-        font-size: 1rem;
-    }
 }
