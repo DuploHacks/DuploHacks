@@ -1,11 +1,10 @@
-@font-face {
-    font-family: 'GeneralFont';
-    src: url('../fonts/mainFont.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+.navBarWrapper.thing {
+    padding-left: 55px;
+    padding-right: 55px;
+    border-bottom: 5px dashed rgba(238, 0, 255, 0.067);
+    background: transparent;
+    backdrop-filter: none;
 }
-
 .navBarWrapper {
     position: fixed;
     top: 0;
@@ -13,12 +12,17 @@
     right: 0;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    background: rgba(25, 0, 35, 0.5);
-    backdrop-filter: blur(10px);
+    align-content: center;
+    padding-top: 21px;
+    padding-bottom: 21px;
+    padding-left: 105px;
+    padding-right: 105px;
+    background-image: url(../assets/NavbarBackground.png);
+    background-size: contain;
+    background-repeat:repeat-x;
     z-index: 1000;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: none;
+    transition: all 0.2s;
 }
 
 .nav-left {
@@ -34,24 +38,25 @@
 
 .nav-left span {
     color: white;
-    font-family: 'mainFont', sans-serif;
+    font-family: 'logoTitleFont';
     font-size: 1.25rem;
 }
 
 .nav-right {
     display: flex;
+    align-items: center;
+    justify-content: center;
     gap: 2.5rem;
 }
 
 .nav-right a {
     color: white;
     text-decoration: none;
-    font-family: 'mainFont', sans-serif;
+    font-family: 'Martian Mono';
     font-size: 1rem;
-    opacity: 0.9;
-    transition: opacity 0.2s;
+    transition: all 0.2s;
 }
 
 .nav-right a:hover {
-    opacity: 1;
+    color: rgba(255, 255, 255, 0.364);
 }

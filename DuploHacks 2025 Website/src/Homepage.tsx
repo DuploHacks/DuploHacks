@@ -11,7 +11,9 @@ export default function Homepage() {
             <Navbar />
             <section className="heroSection">
                 <div className="hero-content">
-                    <img src="src/assets/image-removebg-preview.png" alt="DuploHacks" className="hero-logo" />
+                    <div className="titleSection">
+                        <p className="title">DuploHacks</p>
+                    </div>
                     <div className="event-info">
                         <div className="event-location-container">
                             <span className="icon">⬜</span>

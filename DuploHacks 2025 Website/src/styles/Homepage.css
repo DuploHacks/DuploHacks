@@ -8,6 +8,10 @@
     color: white;
 }
 
+::selection {
+    background-color: #ff00776e
+}
+
 .heroSection {
     height: 100vh;
     width: 100%;
@@ -36,8 +40,43 @@
     margin-bottom: 1rem;
 }
 
+.titleSection {
+    margin: 0px;
+    padding: 0px;
+}
+
+.title {
+    margin: 0px;
+    padding: 0px;
+    font-size: 100px;
+    font-family: 'mainFont';
+    text-align: center;
+    font-weight: bolder;
+    background: linear-gradient(90deg, #ff0078 0%, #ff0078 20%, #0088ff 50%, #ff0078 80%, #ff0078 100%);
+    background-size: 200% 100%;
+    background-position: 0% 50%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    color: transparent;
+    animation: gradientMove 4s linear infinite;
+    -webkit-animation: gradientMove 4s linear infinite;
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    80% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 200% 50%;
+    }
+}
+
 .event-info {
-    display: flex;
+    display: flex;  
     flex-direction: column;
     align-items: center;
     gap: 0.5rem;
@@ -51,7 +90,7 @@
 }
 
 .event-location {
-    font-family: 'Martian Mono', monospace;
+    font-family: 'generalFont';
     font-size: 1.1rem;
     color: white;
     letter-spacing: 0.5px;
@@ -65,7 +104,7 @@
     display: flex;
     align-items: center;
     gap: 0.75rem;
-    font-family: 'Martian Mono', monospace;
+    font-family: 'generalFont';
     font-size: 1.1rem;
     color: white;
     letter-spacing: 0.5px;
