@@ -68,7 +68,8 @@
     height: 32px;
     border: 2px solid white;
     border-radius: 12px 12px 0px 0px;
-    background: #240143;
+    background-image: url('../assets/NavbarBackground.png');
+    background-size: contain;
     padding: 15px;
     transition: all 0.1s ease;
 
@@ -76,7 +77,12 @@
 }
 
 .faq-question:hover {
-    background: #2B0150;
+    filter: brightness(1.5);
+}
+
+.faq-question.expanded{
+    border: 2px solid rgb(250, 2, 130);
+    filter: brightness(1.5);
 }
 
 .faq-answer {
@@ -85,12 +91,14 @@
     width: 90%;
     padding: 15px;
     margin-top: 1px;
-    border: 2px solid whitesmoke;
+    border: 2px solid rgb(250, 2, 130);
     border-radius: 0px 0px 12px 12px;
-    background: #240143;
-
+    background-image: url(../assets/FAQAnswerBackground.png);
+    background-size: contain;
+    filter: brightness(1.5);
     animation: slideDown 0.3s ease-out;
 }
+
 
 /*Rotating arrow*/
 .faq-question::after {

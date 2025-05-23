@@ -1,11 +1,64 @@
-@font-face {
-    font-family: 'GeneralFont';
-    src: url('../fonts/mainFont.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+.nav-hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1100;
+}
+.hamburger-bar {
+    width: 28px;
+    height: 4px;
+    background: white;
+    margin: 3px 0;
+    border-radius: 2px;
+    transition: all 0.3s;
 }
 
+@media (max-width: 900px) {
+    .nav-hamburger {
+        display: flex;
+    }
+    .nav-right {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        background: rgba(25, 0, 35, 0.98);
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        padding: 2rem 0 1rem 0;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        pointer-events: none;
+        border-bottom-left-radius: 16px;
+        border-bottom-right-radius: 16px;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+        transition: max-height 0.4s cubic-bezier(0.4,0,0.2,1), opacity 0.3s;
+    }
+    .nav-right.open {
+        max-height: 400px;
+        opacity: 1;
+        pointer-events: auto;
+    }
+    .navBarWrapper {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+.navBarWrapper.thing {
+    padding-left: 55px;
+    padding-right: 55px;
+    border-bottom: 5px dashed rgba(238, 0, 255, 0.067);
+    background: transparent;
+    backdrop-filter: none;
+}
 .navBarWrapper {
     position: fixed;
     top: 0;
@@ -13,12 +66,17 @@
     right: 0;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    background: rgba(25, 0, 35, 0.5);
-    backdrop-filter: blur(10px);
+    align-content: center;
+    padding-top: 21px;
+    padding-bottom: 21px;
+    padding-left: 105px;
+    padding-right: 105px;
+    background-image: url(../assets/NavbarBackground.png);
+    background-size: contain;
+    background-repeat:repeat-x;
     z-index: 1000;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: none;
+    transition: all 0.2s;
 }
 
 .nav-left {
@@ -34,24 +92,47 @@
 
 .nav-left span {
     color: white;
-    font-family: 'mainFont', sans-serif;
+    font-family: 'logoTitleFont';
     font-size: 1.25rem;
 }
 
 .nav-right {
     display: flex;
+    align-items: center;
+    justify-content: center;
     gap: 2.5rem;
 }
 
 .nav-right a {
     color: white;
     text-decoration: none;
-    font-family: 'mainFont', sans-serif;
+    font-family: 'Martian Mono';
     font-size: 1rem;
-    opacity: 0.9;
-    transition: opacity 0.2s;
+    transition: all 0.2s;
 }
 
 .nav-right a:hover {
-    opacity: 1;
+    color: rgba(255, 255, 255, 0.364);
+}
+
+.link {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0%;
+    height: 2px;
+    background-color: rgba(235, 104, 252, 0.364);
+    transition: width 0.3s;
+    pointer-events: none;
+}
+
+.link:hover::after {
+    width: 100%;
 }

@@ -11,18 +11,20 @@ export default function Homepage() {
             <Navbar />
             <section className="heroSection">
                 <div className="hero-content">
-                    <img src="src/assets/image-removebg-preview.png" alt="DuploHacks" className="hero-logo" />
+                    <div className="titleSection">
+                        <p className="title">DuploHacks</p>
+                    </div>
                     <div className="event-info">
                         <div className="event-location-container">
-                            <span className="icon">⬜</span>
+                            <img className="icon" src="/src/assets/pinicon.png"/>
                             <span className="event-location">200 University Ave, E7</span>
                         </div>
                         <div className="event-details">
                             <div className="event-row">
-                                <span className="icon">📅</span>
+                                <img className="icon" src="/src/assets/calendaricon.png"/>
                                 <span>October 10 - 12th, 2025</span>
                                 <span className="separator">|</span>
-                                <span className="icon clock-icon">⌚</span>
+                                <img className="icon" src="/src/assets/timeicon.png"/>
                                 <span>Applications Coming Soon</span>
                             </div>
                         </div>
@@ -30,13 +32,13 @@ export default function Homepage() {
                     </div>
                 </div>
             </section>
-            <section className="aboutSection">
+            <section className="aboutSection" id="about">
                 <About />
             </section>
-            <section className="sponsorsSection">
+            <section className="sponsorsSection" id="sponsors">
                 <Sponsors />
             </section>
-            <section className="faqAndContactSection">
+            <section className="faqAndContactSection" id="faq">
                 <Faq />
                 <Contact />
             </section>
