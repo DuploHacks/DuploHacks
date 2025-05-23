@@ -8,7 +8,7 @@ const Contact = () => {
         <>
             <div className="footer-heading">STILL HAVE A QUESTION?</div>
             <div className="centered-white-text">
-                REACH OUT TO US AT <span className="centered-white-bold-text"> DUPLOHACKS@GMAIL.COM</span>
+                REACH OUT TO US AT <span className="centered-white-bold-text"> HELLO@DUPLOHACKS.CA</span>
             </div>
 
             <div className="Icons">

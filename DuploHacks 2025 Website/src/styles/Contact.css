@@ -6,7 +6,7 @@
     background: linear-gradient(90deg,#8D36E9 44%, #2D5FEB 55%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-
+    margin-bottom: 20px;
 }
 
 /* General fonts */
@@ -33,9 +33,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 40px 0;
 }
 
-.Icons a{
-    padding-top: 10px;
-    margin: 20px;
+.Icons a {
+    margin: 0 25px;
+    transition: transform 0.3s ease;
+}
+
+.Icons a:hover {
+    transform: scale(1.1);
 }
