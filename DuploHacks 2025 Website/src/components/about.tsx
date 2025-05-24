@@ -22,10 +22,8 @@ const About = () => {
                     </span>
                     <span className="about-description-bracket">&#125;</span>
                 </div>
-
                 <div className="about-image-group">
-                    <div className="about-image-placeholder"></div>
-                    <div className="about-image-caption">located in yadda yadda yadda</div>
+                    <img src="/src/assets/IMG_2262.jpg" alt="DuploHacks event" className="about-image-photo" />
                 </div>
             </div>
         </div>

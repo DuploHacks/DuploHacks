@@ -35,9 +35,9 @@ export default function Homepage() {
             <section className="aboutSection" id="about">
                 <About />
             </section>
-            <section className="sponsorsSection" id="sponsors">
+            {/* <section className="sponsorsSection" id="sponsors">
                 <Sponsors />
-            </section>
+            </section> */}
             <section className="faqAndContactSection" id="faq">
                 <Faq />
                 <Contact />
