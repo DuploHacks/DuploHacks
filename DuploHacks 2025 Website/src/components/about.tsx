@@ -1,6 +1,34 @@
+import { useEffect, useState } from 'react';
 import '../styles/About.css';
 
 const About = () => {
+    const filePrefix = '/src/assets/AboutMeCollage/'
+    const [currentImage, setCurrentImage] = useState(filePrefix + 'Image1.jpg');
+    const [currentImageNum, setCurrentImageNum] = useState(0);
+    const collageImages = [
+        filePrefix + 'Image1.jpg',
+        filePrefix + 'Image2.jpg',
+        filePrefix + 'Image3.jpg',
+        filePrefix + 'Image4.jpg',
+        filePrefix + 'Image5.jpg',
+        filePrefix + 'Image6.jpg',
+        filePrefix + 'Image7.jpg',
+        filePrefix + 'Image8.jpg',
+        filePrefix + 'Image9.jpg'
+    ];
+
+    useEffect(() => {
+        const updateInterval = setInterval(() => {
+            setCurrentImageNum(prev => {
+                const nextNum = (prev + 1) % collageImages.length;
+                setCurrentImage(collageImages[nextNum]);
+                return nextNum;
+            });
+        }, 5000);
+
+        return () => clearInterval(updateInterval);
+    }, []);
+
     return (
         <div className="about-container">
             <div className="about-header-group">
@@ -22,8 +50,9 @@ const About = () => {
                     </span>
                     <span className="about-description-bracket">&#125;</span>
                 </div>
+                
                 <div className="about-image-group">
-                    <img src="/src/assets/IMG_2262.jpg" alt="DuploHacks event" className="about-image-photo" />
+                    <img key = {currentImageNum} src = {currentImage} alt="DuploHacks event" className="about-image-photo" />
                 </div>
             </div>
         </div>
