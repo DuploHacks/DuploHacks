@@ -21,7 +21,7 @@ const Contact = () => {
                 </a>
             </div>
 
-            <h4 className="centered-white-text">© duploHacks 2025</h4>
+            <h4 className="centered-white-text">© DuploHacks 2025</h4>
         </>
     )
 }
