@@ -44,3 +44,22 @@
 .Icons a:hover {
     transform: scale(1.1);
 }
+
+@media (max-width: 480px) {
+  .footer-heading {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+  }
+  .centered-white-text, .centered-white-bold-text {
+    font-size: 1rem;
+    padding-top: 10px;
+  }
+  .Icons {
+    flex-direction: column;
+    gap: 12px;
+    margin: 20px 0;
+  }
+  .Icons a {
+    margin: 8px 0;
+  }
+}
