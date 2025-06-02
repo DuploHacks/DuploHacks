@@ -163,16 +163,11 @@
 }
 
 .faqAndContactSection {
-    min-height: 100vh;
+    height: 1255px;
     width: 100vw;
     background-image: url("../assets/ContactBackground.png");
-    background-size: 100% auto;
+    background-size: 100%;
     background-position: bottom;
-    background-repeat: no-repeat;
-    padding-bottom: 300px; /* Increased padding to move wave down */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 }
 
 @media (max-width: 768px) {
