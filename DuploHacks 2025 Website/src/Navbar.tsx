@@ -33,13 +33,30 @@ export default function Navbar() {
         return () => document.removeEventListener('mousedown', handleClick);
     }, [menuOpen]);
 
+    // Prevent body scroll when menu is open
+    useEffect(() => {
+        if (menuOpen) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'unset';
+        }
+        return () => {
+            document.body.style.overflow = 'unset';
+        };
+    }, [menuOpen]);
+
     return (
         <nav className={`navBarWrapper${atTop ? ' thing' : ''}`} ref={navRef}>
             <div className="nav-left">
                 <img src="/src/assets/DuploHacksNoBackground.png" alt="DuploHacks" className="nav-logo" />
                 <span>DuploHacks</span>
             </div>
-            <button className="nav-hamburger" onClick={() => setMenuOpen(!menuOpen)} aria-label="Open menu">
+            <button 
+                className={`nav-hamburger${menuOpen ? ' open' : ''}`} 
+                onClick={() => setMenuOpen(!menuOpen)} 
+                aria-label={menuOpen ? "Close menu" : "Open menu"}
+                aria-expanded={menuOpen}
+            >
                 <span className="hamburger-bar"></span>
                 <span className="hamburger-bar"></span>
                 <span className="hamburger-bar"></span>

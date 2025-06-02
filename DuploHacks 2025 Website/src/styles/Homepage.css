@@ -182,11 +182,16 @@
     }
 
     .title {
-        font-size: 90px;
+        font-size: 60px;
+        padding: 0 20px;
+        text-align: center;
     }
 
     .event-row {
         font-size: 0.9rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
     }
 
     .event-location {
@@ -196,31 +201,87 @@
     .sponsor-button {
         padding: 0.5rem 2rem;
         font-size: 1rem;
-    }
-}
-@media (max-width: 668px) {
-    .hero-logo {
-        width: 80%;
-        max-width: 500px;
+        margin-top: 1.5rem;
     }
 
+    .hero-content {
+        padding: 0 20px;
+        margin-top: 0;
+    }
+
+    .event-info {
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 480px) {
     .title {
-        font-size: 70px;
+        font-size: 40px;
     }
 
     .event-row {
-        font-size: 0.6rem;
+        font-size: 0.8rem;
     }
 
     .event-location {
-        font-size: 0.6rem;
+        font-size: 0.8rem;
     }
 
-    .icon{
-        height: 15px;
+    .icon {
+        height: 18px;
     }
 
     .sponsor-button {
-        font-size: 1rem;
+        padding: 0.5rem 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    .hero-content {
+        gap: 1.5rem;
+    }
+
+    .event-info {
+        gap: 0.25rem;
+    }
+}
+
+/* Add smooth scrolling for the entire page */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Improve touch targets for mobile */
+.sponsor-button,
+.link {
+    min-height: 44px;
+    min-width: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Ensure proper spacing in sections */
+.aboutSection,
+.sponsorsSection,
+.faqAndContactSection {
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Improve background image handling on mobile */
+@media (max-width: 768px) {
+    .heroSection {
+        background-position: center center;
+        background-size: cover;
+    }
+
+    .aboutSection {
+        background-size: cover;
+    }
+
+    .faqAndContactSection {
+        background-size: cover;
+        padding-bottom: 200px;
     }
 }
