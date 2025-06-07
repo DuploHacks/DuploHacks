@@ -12,19 +12,22 @@ const Contact = () => {
                     REACH OUT TO US AT <span className="centered-white-bold-text"> HELLO@DUPLOHACKS.CA</span>
                 </div>
             </div>
-            <hr/>
-            <div className="body-container">
-                <h4 className="white-link">Code of Conduct</h4>
-                <div className="Icons">
+            <hr className="footer-divider"/>
+            <div className="footer-bar">
+                <div className="footer-left">
+                    <a className="white-link" href="#">Code of Conduct</a>
+                </div>
+                <div className="footer-center">
                     <a href="https://www.instagram.com/duplohacks_/" target="_blank" rel="noopener noreferrer">
-                        <img src={Instagram} alt="Instagram" />
+                        <img src={Instagram} alt="Instagram" className="footer-icon" />
                     </a>
-
                     <a href="https://www.linkedin.com/company/duplohacks" target="_blank" rel="noopener noreferrer">
-                        <img src={LinkedIn} alt="LinkedIn" />
+                        <img src={LinkedIn} alt="LinkedIn" className="footer-icon" />
                     </a>
                 </div>
-                <h4 className="centered-white-text">© DuploHacks 2025</h4>
+                <div className="footer-right">
+                    <span className="footer-copyright">© DuploHacks 2025</span>
+                </div>
             </div>
         </>
     )
