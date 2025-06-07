@@ -1,6 +1,7 @@
 import React from 'react';
 import '../styles/Team.css';
 import TeamPageBackground from '../assets/TeamPageBackground.png';
+import Navbar from './Navbar';
 import Simrik from '../assets/Simrik.jpg';
 import Sehan from '../assets/Sehan.jpg';
 import Sarveshwar from '../assets/sarv - Sarveshwar Senthil Kumar.jpg';
@@ -11,6 +12,7 @@ import John from '../assets/John.jpeg';
 import JasonTran from '../assets/Jason_Tran.jpg';
 import Ella from '../assets/Ella.jpeg';
 import Dasha from '../assets/Dasha.jpeg';
+import Weijie from '../assets/Weijie.jpg';
 
 const teamData = [
   {
@@ -55,7 +57,7 @@ const teamData = [
       { name: 'Dasha Turetska', img: Dasha },
       { name: 'Ella Li', img: Ella },
       { name: 'Sarveshwar', img: Sarveshwar },
-      { name: 'Weijie Wang', img: 'https://placehold.co/160x160?text=Photo' },
+      { name: 'Weijie Wang', img: Weijie },
     ],
   },
 ];
@@ -63,6 +65,7 @@ const teamData = [
 const Team = () => {
   return (
     <div className="team-page" style={{ backgroundImage: `url(${TeamPageBackground})` }}>
+      <Navbar />
       <div className="team-header-group">
         <div className="team-label">[TEAM]</div>
         <div className="team-title">OUR TEAM</div>
