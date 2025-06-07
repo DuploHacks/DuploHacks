@@ -48,7 +48,7 @@
 .title {
     margin: 0px;
     padding: 0px;
-    font-size: 100px;
+    font-size: 200px;
     font-family: 'mainFont';
     text-align: center;
     font-weight: bolder;
@@ -183,7 +183,7 @@
     }
 
     .title {
-        font-size: 60px;
+        font-size: 80px;
         padding: 0 20px;
         text-align: center;
     }
@@ -218,7 +218,7 @@
 
 @media (max-width: 480px) {
     .title {
-        font-size: 40px;
+        font-size: 60px;
     }
 
     .event-row {
