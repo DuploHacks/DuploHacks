@@ -49,8 +49,10 @@ export default function Navbar() {
     return (
         <nav className={`navBarWrapper${atTop ? ' thing' : ''}`} ref={navRef}>
             <div className="nav-left">
-                <img src="/src/assets/DuploHacksNoBackground.png" alt="DuploHacks" className="nav-logo" />
-                <span>DuploHacks</span>
+                <Link to="/" onClick={() => setMenuOpen(false)}>
+                    <img src="/src/assets/DuploHacksNoBackground.png" alt="DuploHacks" className="nav-logo" />
+                    <span>DuploHacks</span>
+                </Link>
             </div>
             <button 
                 className={`nav-hamburger${menuOpen ? ' open' : ''}`} 
@@ -63,10 +65,10 @@ export default function Navbar() {
                 <span className="hamburger-bar"></span>
             </button>
             <div className={`nav-right${menuOpen ? ' open' : ''}`}> 
-                <a className="link" href="#about" onClick={() => setMenuOpen(false)}>about</a>
+                <Link className="link" to="/#about" onClick={() => setMenuOpen(false)}>about</Link>
                 <Link className="link" to="/team" onClick={() => setMenuOpen(false)}>team</Link>
-                <a className="link" href="#sponsors" onClick={() => setMenuOpen(false)}>sponsors</a>
-                <a className="link" href="#faq" onClick={() => setMenuOpen(false)}>faq</a>
+                <Link className="link" to="/#sponsors" onClick={() => setMenuOpen(false)}>sponsors</Link>
+                <Link className="link" to="/#faq" onClick={() => setMenuOpen(false)}>faq</Link>
             </div>
         </nav>
     );
