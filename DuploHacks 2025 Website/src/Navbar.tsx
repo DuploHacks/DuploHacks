@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import './styles/Navbar.css';
+import { Link } from 'react-router-dom';
 
 export default function Navbar() {
     const [atTop, setAtTop] = useState(true);
@@ -63,7 +64,7 @@ export default function Navbar() {
             </button>
             <div className={`nav-right${menuOpen ? ' open' : ''}`}> 
                 <a className="link" href="#about" onClick={() => setMenuOpen(false)}>about</a>
-                <a className="link" href="#team" onClick={() => setMenuOpen(false)}>team</a>
+                <Link className="link" to="/team" onClick={() => setMenuOpen(false)}>team</Link>
                 <a className="link" href="#sponsors" onClick={() => setMenuOpen(false)}>sponsors</a>
                 <a className="link" href="#faq" onClick={() => setMenuOpen(false)}>faq</a>
             </div>

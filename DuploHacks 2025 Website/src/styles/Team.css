@@ -1,0 +1,119 @@
+body, .team-page {
+  min-height: 100vh;
+  width: 100vw;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-family: 'Martian Mono', monospace;
+  overflow-x: hidden;
+}
+
+.team-header-group {
+  text-align: center;
+  margin-top: 32px;
+  margin-bottom: 24px;
+}
+.team-label {
+  color: #b3b3b3;
+  font-size: 1.2rem;
+  letter-spacing: 0.15em;
+  margin-bottom: 8px;
+}
+.team-title {
+  font-family: 'Bauhaus 93', serif;
+  font-size: 3.5rem;
+  background: linear-gradient(90deg, #feb5db 0%, #9FB2F2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: bold;
+  letter-spacing: 0.04em;
+  margin-bottom: 16px;
+}
+.team-groups {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.team-group {
+  margin-bottom: 0px;
+}
+.team-group-label {
+  color: #b3b3b3;
+  font-size: 1.3rem;
+  text-align: center;
+  margin-bottom: 12px;
+  letter-spacing: 0.12em;
+}
+.team-members {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 32px 48px;
+}
+.team-member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 160px;
+}
+.team-member-img-wrapper {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 2.5px dashed #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+  background: rgba(0,0,0,0.15);
+}
+.team-member-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #222;
+}
+.team-member-name {
+  color: #fff;
+  font-size: 1.1rem;
+  text-align: center;
+  margin-top: 4px;
+  font-family: 'Martian Mono', monospace;
+}
+@media (max-width: 900px) {
+  .team-members {
+    gap: 24px 16px;
+  }
+  .team-member {
+    width: 120px;
+  }
+  .team-member-img-wrapper {
+    width: 90px;
+    height: 90px;
+  }
+  .team-member-img {
+    width: 70px;
+    height: 70px;
+  }
+}
+@media (max-width: 600px) {
+  .team-title {
+    font-size: 2rem;
+  }
+  .team-group-label {
+    font-size: 1rem;
+  }
+  .team-header-group {
+    margin-top: 16px;
+    margin-bottom: 8px;
+  }
+  .team-groups {
+    gap: 18px;
+  }
+} 
