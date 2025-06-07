@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import '../styles/Faq.css';
 
 const Faq = () => {
-    const [expandedRow, setExpandedRow] = useState<number | null>(null);
     const [expandedItems, setExpandedItems] = useState<{ [key: string]: boolean }>({});
 
     const faqItems = [
@@ -33,19 +32,10 @@ const Faq = () => {
     ];
 
     const toggleItem = (index: number) => {
-        const rowIndex = Math.floor(index / 2);
-
-        if (expandedRow === rowIndex) {
-            setExpandedItems(prev => ({
-                ...prev,
-                [index]: !prev[index]
-            }));
-        } else {
-            setExpandedRow(rowIndex);
-            setExpandedItems({
-                [index]: true
-            });
-        }
+        setExpandedItems(prev => ({
+            ...prev,
+            [index]: !prev[index]
+        }));
     };
 
     return (
@@ -64,15 +54,22 @@ const Faq = () => {
                         key={index} 
                         className="faq-item"
                     >
-                        <h2 
+                        <button 
                             onClick={() => toggleItem(index)}
                             className={`faq-question ${expandedItems[index] ? 'expanded' : ''}`}
+                            aria-expanded={expandedItems[index]}
+                            aria-controls={`faq-answer-${index}`}
                         >
                             {item.question}
-                        </h2>
+                        </button>
                         
                         {expandedItems[index] && (
-                            <div className="faq-answer">
+                            <div 
+                                id={`faq-answer-${index}`}
+                                className="faq-answer"
+                                role="region"
+                                aria-label={`Answer to ${item.question}`}
+                            >
                                 {item.answer}
                             </div>
                         )}
