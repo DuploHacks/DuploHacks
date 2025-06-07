@@ -163,7 +163,7 @@
 }
 
 .faqAndContactSection {
-    height: 1405px;
+    height: 1435px;
     width: 100vw;
     background-image: url("../assets/ContactBackground.png");
     background-size: 100%;
@@ -260,7 +260,7 @@ html {
 .aboutSection,
 .sponsorsSection,
 .faqAndContactSection {
-    padding: 20px;
+    padding-top: 20px;
     box-sizing: border-box;
 }
 
@@ -277,6 +277,5 @@ html {
 
     .faqAndContactSection {
         background-size: cover;
-        padding-bottom: 200px;
     }
 }

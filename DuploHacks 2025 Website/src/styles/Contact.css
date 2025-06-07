@@ -9,6 +9,20 @@
     margin-bottom: 20px;
 }
 
+.heading-container {
+    padding-bottom: 22%;
+}
+
+.body-container {
+    display: flex;
+    column-gap: 20%;
+    width: 100%;
+    height: auto;
+    overflow: visible;
+    position: static;
+    justify-content: center;
+}
+
 /* General fonts */
 .centered-white-text {
     font-family: 'Martian Mono', serif;
@@ -26,6 +40,19 @@
     font-size: 26px;
     padding-top: 40px;
     font-weight: bold;
+}
+
+.white-link {
+    font-family: 'Martian Mono', serif;
+    color: white;
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+    padding-top: 20px;
+}
+
+.white-link:hover {
+    color: dodgerblue;
 }
 
 /* Icons */
