@@ -1,58 +1,28 @@
 import "../styles/Sponsors.css"
-import tempSponsorsImg from '../assets/tempSponsorsImg.png'
+import hackclubLogo from '../assets/hackclub.png';
+import codeCraftersLogo from '../assets/CodeCrafters.png';
+import interviewCakeLogo from '../assets/interviewcake.png';
 
 function Sponsors() {
   return (
     <>
-      <div className = "sponsors-grayheading">
+      <div className="sponsors-grayheading">
         [thank you to]
       </div>
 
-      <div className = "sponsors-heading">
+      <div className="sponsors-heading">
         OUR SPONSORS
       </div>
 
-      <section className = "sponsor-tiers">
-        <div className = "Diamond">
-          <h1 className = "sponsor-tier"> Diamond </h1>
-
-          <div className = "sponsor-images">
-            <img className = "sponsor-image" src = {tempSponsorsImg}></img>
-            <img className = "sponsor-image" src = {tempSponsorsImg}></img>
-            <img className = "sponsor-image" src = {tempSponsorsImg}></img>
-          </div>
+      <div className="sponsors-flex">
+        <div className="sponsors-row sponsors-row-top">
+          <img className="sponsor-image hackclub-logo" src={hackclubLogo} alt="Hack Club" />
+          <img className="sponsor-image codecrafters-logo" src={codeCraftersLogo} alt="CodeCrafters" />
         </div>
-
-        <div className = "Gold">
-          <h1 className = "sponsor-tier"> Gold </h1>
-
-          <div className = "sponsor-images">
-            <img className = "sponsor-image" src = {tempSponsorsImg}></img>
-            <img className = "sponsor-image" src = {tempSponsorsImg}></img>
-            <img className = "sponsor-image" src = {tempSponsorsImg}></img>
-          </div>
+        <div className="sponsors-row sponsors-row-bottom">
+          <img className="sponsor-image interviewcake-logo" src={interviewCakeLogo} alt="Interview Cake" />
         </div>
-
-        <div className = "Silver">
-          <h1 className = "sponsor-tier"> Silver </h1>
-
-          <div className = "sponsor-images">
-            <img className = "sponsor-image" src = {tempSponsorsImg}></img>
-            <img className = "sponsor-image" src = {tempSponsorsImg}></img>
-            <img className = "sponsor-image" src = {tempSponsorsImg}></img>
-          </div>
-        </div>
-
-        <div className = "Bronze">
-          <h1 className = "sponsor-tier"> Bronze </h1>
-
-          <div className = "sponsor-images">
-            <img className = "sponsor-image" src = {tempSponsorsImg}></img>
-            <img className = "sponsor-image" src = {tempSponsorsImg}></img>
-            <img className = "sponsor-image" src = {tempSponsorsImg}></img>
-          </div>
-        </div>
-      </section>
+      </div>
     </>
   );
 }
