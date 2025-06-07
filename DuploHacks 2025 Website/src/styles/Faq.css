@@ -18,6 +18,7 @@
     font-size: 16px;
     padding-top: 20px;
     font-weight: lighter;
+    font-family: 'Martian Mono', monospace;
 }
 
 .faq-heading {
@@ -141,7 +142,8 @@
     border: 2px solid #2D5FEB;
     border-top: none;
     border-radius: 0px 0px 12px 12px;
-    background-image: url(../assets/FAQAnswerBackground.png);
+    background-image: none;
+    background-color: transparent;
     background-size: cover;
     filter: brightness(1.2);
     animation: slideDown 0.3s ease-out;

@@ -28,7 +28,7 @@ export default function Homepage() {
                                 <span>Applications Coming Soon</span>
                             </div>
                         </div>
-                        <button className="sponsor-button">Sponsor Us?</button>
+                        <button className="sponsor-button" onClick={() => window.location.href = 'mailto:hello@duplohacks.ca'}>Sponsor Us?</button>
                     </div>
                 </div>
             </section>

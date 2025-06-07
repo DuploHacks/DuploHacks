@@ -46,7 +46,7 @@ const About = () => {
                         with repetitive hackathon formats, we decided to shake things up and bring something fresh to
                         the scene. Our unique format features a main theme at kickoff, followed by a surprise second
                         theme revealed halfway through. This challenges hackers to adapt quickly and rewards those
-                        who can connect their projects across both themes.
+                        who can connect their projects across both themes
                     </span>
                     <span className="about-description-bracket">&#125;</span>
                 </div>
