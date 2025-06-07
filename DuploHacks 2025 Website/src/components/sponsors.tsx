@@ -16,11 +16,17 @@ function Sponsors() {
 
       <div className="sponsors-flex">
         <div className="sponsors-row sponsors-row-top">
-          <img className="sponsor-image hackclub-logo" src={hackclubLogo} alt="Hack Club" />
-          <img className="sponsor-image codecrafters-logo" src={codeCraftersLogo} alt="CodeCrafters" />
+          <a href="https://hackclub.com" target="_blank" rel="noopener noreferrer">
+            <img className="sponsor-image hackclub-logo" src={hackclubLogo} alt="Hack Club" />
+          </a>
+          <a href="https://codecrafters.io" target="_blank" rel="noopener noreferrer">
+            <img className="sponsor-image codecrafters-logo" src={codeCraftersLogo} alt="CodeCrafters" />
+          </a>
         </div>
         <div className="sponsors-row sponsors-row-bottom">
-          <img className="sponsor-image interviewcake-logo" src={interviewCakeLogo} alt="Interview Cake" />
+          <a href="https://www.interviewcake.com" target="_blank" rel="noopener noreferrer">
+            <img className="sponsor-image interviewcake-logo" src={interviewCakeLogo} alt="Interview Cake" />
+          </a>
         </div>
       </div>
     </>
