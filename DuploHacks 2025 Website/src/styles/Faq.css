@@ -55,7 +55,7 @@
 
 .faq-tab-button {
     background: #333;
-    border: 2px solid #ee00ff;
+    border: 2px solid #8D36E9;
     border-radius: 8px;
     padding: 12px 24px;
     color: white;
@@ -68,13 +68,13 @@
 
 .faq-tab-button:hover {
     background: #444;
-    border-color: #ff66ff;
+    border-color: #2D5FEB;
 }
 
 .faq-tab-button.active {
-    background: #ee00ff;
-    border-color: #ff66ff;
-    color: black;
+    background: #8D36E9;
+    border-color: #2D5FEB;
+    color: white;
     font-weight: bold;
 }
 
@@ -110,9 +110,9 @@
     word-wrap: break-word;
     width: 100%;
     min-height: 32px;
-    border: 2px solid #ee00ff;
+    border: 2px solid #8D36E9;
     border-radius: 12px;
-    background-image: url('../assets/FAQItemBackground.png');
+    background-image: url('../assets/NavbarBackground.png');
     background-size: cover;
     padding: 18px 24px;
     transition: all 0.2s ease;
@@ -123,11 +123,11 @@
 
 .faq-question:hover {
     filter: brightness(1.2);
-    border-color: #ff66ff;
+    border-color: #2D5FEB;
 }
 
 .faq-question.expanded {
-    border-color: #ff66ff;
+    border-color: #2D5FEB;
     filter: brightness(1.2);
     border-radius: 12px 12px 0px 0px;
 }
@@ -138,7 +138,7 @@
     width: 100%;
     padding: 18px 24px;
     margin-top: 0px;
-    border: 2px solid #ff66ff;
+    border: 2px solid #2D5FEB;
     border-top: none;
     border-radius: 0px 0px 12px 12px;
     background-image: url(../assets/FAQAnswerBackground.png);
@@ -159,7 +159,7 @@
 }
 
 .faq-question.expanded::after {
-    color: #ff66ff;
+    color: #2D5FEB;
     transform: rotate(90deg);
 }
 
