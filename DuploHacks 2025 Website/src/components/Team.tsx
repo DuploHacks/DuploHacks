@@ -4,7 +4,7 @@ import Navbar from './Navbar';
 import Simrik from '../assets/Simrik.jpg';
 import Sehan from '../assets/Sehan.jpg';
 import Sarveshwar from '../assets/sarv - Sarveshwar Senthil Kumar.jpg';
-import OwenWu from '../assets/Owen Wu.jpg';
+import OwenWu from '../assets/Owen-Wu.JPG';
 import Muhammud from '../assets/Muhammud.jpeg';
 import Megh from '../assets/Megh.jpeg';
 import John from '../assets/John.jpeg';
