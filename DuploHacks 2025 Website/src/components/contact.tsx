@@ -15,7 +15,7 @@ const Contact = () => {
             <hr className="footer-divider"/>
             <div className="footer-bar">
                 <div className="footer-left">
-                    <a className="white-link" href="#">Code of Conduct</a>
+                    <span className="white-link">Made with 💜 by the DuploHacks Team</span>
                 </div>
                 <div className="footer-center">
                     <a href="https://www.instagram.com/duplohacks_/" target="_blank" rel="noopener noreferrer">

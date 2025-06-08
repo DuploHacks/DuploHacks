@@ -55,7 +55,7 @@
 }
 
 .faq-tab-button {
-    background: #333;
+    background: #190023;
     border: 2px solid #8D36E9;
     border-radius: 8px;
     padding: 12px 24px;
@@ -68,7 +68,7 @@
 }
 
 .faq-tab-button:hover {
-    background: #444;
+    background: #2D5FEB;
     border-color: #2D5FEB;
 }
 
@@ -81,8 +81,9 @@
 
 /*Grid*/
 .faq-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 32px;
     padding: 0 60px;
     max-width: 1200px;
@@ -91,6 +92,7 @@
 
 .faq-item {
     width: 100%;
+    max-width: 550px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -115,7 +117,8 @@
     border-radius: 12px;
     background-image: url('../assets/NavbarBackground.png');
     background-size: cover;
-    padding: 18px 24px;
+    background-position: top;
+    padding: 15px 24px;
     transition: all 0.2s ease;
     cursor: pointer;
     -webkit-tap-highlight-color: transparent;
@@ -177,6 +180,9 @@
         grid-template-columns: 1fr;
         max-width: 600px;
         padding: 0 20px;
+    }
+    .faq-item {
+        max-width: 100%;
     }
 }
 
