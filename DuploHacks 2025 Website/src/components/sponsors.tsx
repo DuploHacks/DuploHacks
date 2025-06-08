@@ -28,7 +28,7 @@ function Sponsors() {
           <a href="https://www.interviewcake.com" target="_blank" rel="noopener noreferrer">
             <img className="sponsor-image interviewcake-logo" src={interviewCakeLogo} alt="Interview Cake" />
           </a>
-          <a href="#" target="_blank" rel="noopener noreferrer">
+          <a href="https://youthcreativityfund.ca" target="_blank" rel="noopener noreferrer">
             <img className="sponsor-image youthcreativityfund-logo" src={youthCreativityFundLogo} alt="Youth Creativity Fund" />
           </a>
         </div>

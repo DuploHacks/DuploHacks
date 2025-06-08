@@ -170,7 +170,7 @@
 
 .faq-container {
     min-height: auto;
-    padding-bottom: 80px;
+    padding-bottom: 0px;
     overflow-x: hidden;
 }
 
@@ -183,6 +183,9 @@
     }
     .faq-item {
         max-width: 100%;
+    }
+    .faq-container {
+        padding-bottom: 0px;
     }
 }
 
@@ -263,7 +266,7 @@
 @media (min-width: 1025px) {
     .faq-container {
         min-height: 100vh;
-        padding-bottom: 40px;
+        padding-bottom: 0px;
         overflow-x: hidden;
     }
 
