@@ -2,6 +2,7 @@ import "../styles/Sponsors.css"
 import hackclubLogo from '../assets/hackclub.png';
 import codeCraftersLogo from '../assets/CodeCrafters.png';
 import interviewCakeLogo from '../assets/interviewcake.png';
+import youthCreativityFundLogo from '../assets/youthcreativityfund.png';
 
 function Sponsors() {
   return (
@@ -26,6 +27,9 @@ function Sponsors() {
         <div className="sponsors-row sponsors-row-bottom">
           <a href="https://www.interviewcake.com" target="_blank" rel="noopener noreferrer">
             <img className="sponsor-image interviewcake-logo" src={interviewCakeLogo} alt="Interview Cake" />
+          </a>
+          <a href="#" target="_blank" rel="noopener noreferrer">
+            <img className="sponsor-image youthcreativityfund-logo" src={youthCreativityFundLogo} alt="Youth Creativity Fund" />
           </a>
         </div>
       </div>
