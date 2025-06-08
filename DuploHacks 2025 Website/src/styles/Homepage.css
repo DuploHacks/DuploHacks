@@ -154,6 +154,7 @@
     background-image: url("../assets/AboutSectionBackgroundImage.png");
     background-size: contain;
     background-position: top;
+    padding: 0 60px;
 }
 
 .sponsorsSection {
