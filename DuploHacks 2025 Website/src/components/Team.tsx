@@ -1,11 +1,10 @@
 import React from 'react';
 import '../styles/Team.css';
-import TeamPageBackground from '../assets/TeamPageBackground.png';
 import Navbar from './Navbar';
 import Simrik from '../assets/Simrik.jpg';
 import Sehan from '../assets/Sehan.jpg';
 import Sarveshwar from '../assets/sarv - Sarveshwar Senthil Kumar.jpg';
-import OwenWu from '../assets/Owen Wu.JPG';
+import OwenWu from '../assets/Owen Wu.jpg';
 import Muhammud from '../assets/Muhammud.jpeg';
 import Megh from '../assets/Megh.jpeg';
 import John from '../assets/John.jpeg';
@@ -13,24 +12,31 @@ import JasonTran from '../assets/Jason_Tran.jpg';
 import Ella from '../assets/Ella.jpeg';
 import Dasha from '../assets/Dasha.jpeg';
 import Weijie from '../assets/Weijie.jpg';
+import Vijay from '../assets/vijay.png';
+import Will from '../assets/will.jpg';
+import Sathvik from '../assets/sathvik (3).png';
+import James from '../assets/James.png';
+import Maizah from '../assets/Maizah.png';
+import Gursaaz from '../assets/gursaaz.jpg';
+import Bowen from '../assets/bowen.png';
+import BillBasnet from '../assets/Bill Basnet.jpg';
 
 const teamData = [
   {
     group: 'Co-Leads & Founders',
     members: [
       { name: 'Jason Tran', img: JasonTran },
-      { name: 'Sathvik Haridasu', img: 'https://placehold.co/160x160?text=Photo' },
+      { name: 'Sathvik Haridasu', img: Sathvik },
       { name: 'Simrik Silvas', img: Simrik },
     ],
   },
   {
     group: 'Web-Tech',
     members: [
-      { name: 'Vijay Shrivarshan Vijayaraja', img: 'https://placehold.co/160x160?text=Photo' },
+      { name: 'Vijay Shrivarshan Vijayaraja', img: Vijay },
       { name: 'Haoshi (Owen) Wu', img: OwenWu },
       { name: 'Sehan Munhir', img: Sehan },
-      { name: 'Bowen Shao', img: 'https://placehold.co/160x160?text=Photo' },
-      { name: 'Marium Ahmed', img: 'https://placehold.co/160x160?text=Photo' },
+      { name: 'Bowen Shao', img: Bowen },
     ],
   },
   {
@@ -39,16 +45,16 @@ const teamData = [
       { name: 'Megh Patel', img: Megh },
       { name: 'John Fu', img: John },
       { name: 'Muhammad Ahmed', img: Muhammud },
-      { name: 'James Yang', img: 'https://placehold.co/160x160?text=Photo' },
+      { name: 'James Yang', img: James },
     ],
   },
   {
     group: 'Marketing/Design',
     members: [
-      { name: 'Bill Basnet', img: 'https://placehold.co/160x160?text=Photo' },
-      { name: 'Maizah Tanveer', img: 'https://placehold.co/160x160?text=Photo' },
-      { name: 'Gursaaz Gund', img: 'https://placehold.co/160x160?text=Photo' },
-      { name: 'William Lovegrove', img: 'https://placehold.co/160x160?text=Photo' },
+      { name: 'Bill Basnet', img: BillBasnet },
+      { name: 'Maizah Tanveer', img: Maizah },
+      { name: 'Gursaaz Gund', img: Gursaaz },
+      { name: 'William Lovegrove', img: Will },
     ],
   },
   {
@@ -56,7 +62,7 @@ const teamData = [
     members: [
       { name: 'Dasha Turetska', img: Dasha },
       { name: 'Ella Li', img: Ella },
-      { name: 'Sarveshwar', img: Sarveshwar },
+      { name: 'Sarveshwar Senthil Kumar', img: Sarveshwar },
       { name: 'Weijie Wang', img: Weijie },
     ],
   },
@@ -64,7 +70,7 @@ const teamData = [
 
 const Team = () => {
   return (
-    <div className="team-page" style={{ backgroundImage: `url(${TeamPageBackground})` }}>
+    <div className="team-page">
       <Navbar />
       <div className="team-header-group">
         <div className="team-label">[TEAM]</div>

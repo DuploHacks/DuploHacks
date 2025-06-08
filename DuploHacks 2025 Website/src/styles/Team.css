@@ -1,9 +1,7 @@
 body, .team-page {
   min-height: 100vh;
   width: 100vw;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background: linear-gradient(180deg, #240043 0%, #4a008c 100%);
   color: #fff;
   font-family: 'Martian Mono', monospace;
   overflow-x: hidden;

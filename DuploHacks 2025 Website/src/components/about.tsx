@@ -53,6 +53,7 @@ const About = () => {
                 
                 <div className="about-image-group">
                     <img id = "aboutimage" key = {currentImageNum} src = {currentImage} alt="DuploHacks event" className="about-image-photo" />
+                    <div className="about-image-caption">JamHacks 9</div>
                 </div>
             </div>
         </div>

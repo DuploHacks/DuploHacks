@@ -1,12 +1,15 @@
 /* Headings */
 .footer-heading {
-    font-family: 'BagelFatOne', serif;
+    font-family: 'Bauhaus 93', serif;
     text-align: center;
     font-size: 80px;
-    background: linear-gradient(90deg,#c6a5e9 44%, #7998ec 55%);
+    background: linear-gradient(90deg, #feb5db 0%, #9FB2F2 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    background-clip: text;
     margin-bottom: 0px;
+    font-weight: bold;
+    letter-spacing: 0.04em;
 }
 
 .heading-container {
@@ -46,9 +49,10 @@
     font-family: 'Martian Mono', serif;
     color: white;
     text-align: center;
-    font-size: 26px;
+    font-size: 20px;
     font-weight: bold;
     padding-top: 20px;
+    white-space: nowrap;
 }
 
 .white-link:hover {
@@ -141,13 +145,24 @@
     font-family: 'Martian Mono', monospace;
 }
 @media (max-width: 700px) {
+    .white-link {
+        font-size: 14px;
+        white-space: normal;
+    }
     .footer-bar {
         flex-direction: column;
         gap: 18px;
         padding: 18px 4px 12px 4px;
         text-align: center;
     }
-    .footer-left, .footer-center, .footer-right {
+    .footer-left {
+        flex: unset;
+        text-align: center;
+        flex-wrap: wrap;
+        justify-content: center;
+        overflow: hidden;
+    }
+    .footer-center, .footer-right {
         flex: unset;
         text-align: center;
     }
