@@ -4,7 +4,7 @@ import Navbar from './Navbar';
 import Simrik from '../assets/Simrik.jpg';
 import Sehan from '../assets/Sehan.jpg';
 import Sarveshwar from '../assets/sarv - Sarveshwar Senthil Kumar.jpg';
-import OwenWu from '../assets/Owen-Wu.JPG';
+import OwenWu from '../assets/Owen-Wu.jpg';
 import Muhammud from '../assets/Muhammud.jpeg';
 import Megh from '../assets/Megh.jpeg';
 import John from '../assets/John.jpeg';
@@ -77,11 +77,11 @@ const Team = () => {
         <div className="team-title">OUR TEAM</div>
       </div>
       <div className="team-groups">
-        {teamData.map((group, idx) => (
+        {teamData.map((group) => (
           <div className="team-group" key={group.group}>
             <div className="team-group-label">[{group.group}]</div>
             <div className="team-members">
-              {group.members.map((member, i) => (
+              {group.members.map((member) => (
                 <div className="team-member" key={member.name}>
                   <div className="team-member-img-wrapper">
                     <img className="team-member-img" src={member.img} alt={member.name} />
