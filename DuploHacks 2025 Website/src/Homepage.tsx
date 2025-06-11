@@ -20,7 +20,7 @@ export default function Homepage() {
                     <div className="event-info">
                         <div className="event-location-container">
                             <img className="icon" src={pinIcon} />
-                            <span className="event-location">200 University Ave, E7</span>
+                            <span className="event-location">To Be Announced Soon...</span>
                         </div>
                         <div className="event-details">
                             <div className="event-row">

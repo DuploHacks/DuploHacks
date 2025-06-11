@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../styles/Team.css';
 import Navbar from './Navbar';
 
@@ -73,6 +73,10 @@ const teamData = [
 ];
 
 const Team = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="team-page">
       <Navbar />
