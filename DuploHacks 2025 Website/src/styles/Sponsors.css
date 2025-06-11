@@ -3,21 +3,17 @@
   text-align: center;
   font-size: 20px;
   padding-top: 40px;
-
-  color: white;
-  opacity: 0.17;
+  color: #482a63;
 }
 
 .sponsors-heading {
-  font-family: "Bauhaus 93", "serif";
+  font-family: 'Bauhaus 93', serif;
   text-align: center;
-  font-size: 90px;
-  background: linear-gradient(90deg, #fcb5dc 0%, #4667df 100%);
+  font-size: 100px;
+  background: linear-gradient(90deg,#F9B5DC 44%, #A2B2F3 55%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-clip: text;
-  font-weight: bold;
-  letter-spacing: 0.04em;
+  margin-bottom: 20px;
 }
 
 .sponsor-tiers {
@@ -190,5 +186,10 @@
   .youthcreativityfund-logo {
     height: 125px;
     width: 250px;
+  }
+}
+@media (max-width: 768px) {
+  .sponsors-heading {
+    font-size: 60px;
   }
 }

@@ -40,7 +40,6 @@ const About = () => {
 
             <div className="about-content-group">
                 <div className="about-description">
-                    <span className="about-description-bracket">&#123; </span>
                     <span className="about-description-main">
                         DuploHacks is a hackathon by teenagers, for teenagers. Born out of our founders' experiences
                         with repetitive hackathon formats, we decided to shake things up and bring something fresh to
@@ -48,9 +47,7 @@ const About = () => {
                         theme revealed halfway through. This challenges hackers to adapt quickly and rewards those
                         who can connect their projects across both themes
                     </span>
-                    <span className="about-description-bracket">&#125;</span>
                 </div>
-                
                 <div className="about-image-group">
                     <img id = "aboutimage" key = {currentImageNum} src = {currentImage} alt="DuploHacks event" className="about-image-photo" />
                     <div className="about-image-caption">JamHacks 9</div>

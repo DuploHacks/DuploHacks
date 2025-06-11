@@ -10,13 +10,10 @@
     margin-bottom: 20px;
 }
 .about-title-label {
-    color: #6b6b6b;
-    font-size: 1.5rem;
-    font-family: 'Martian Mono', monospace;
-    opacity: 0.5;
-    margin-bottom: 10px;
-    font-weight: 600;
-    letter-spacing: 0.03em;
+  font-family: 'Martian Mono', 'serif';
+  font-size: 20px;
+  padding-top: 40px;
+  color: #482a63;
 }
 .about-title {
     font-family: 'Bauhaus 93', serif;
@@ -43,6 +40,7 @@
     flex-direction: row;
     gap: 40px;
     margin-top: 20px;
+    background-color: red;
     /* Remove image group spacing */
 }
 .about-description {
