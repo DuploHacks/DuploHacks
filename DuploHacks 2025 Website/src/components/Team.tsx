@@ -11,7 +11,7 @@ import John from '../assets/John.jpeg';
 import JasonTran from '../assets/Jason_Tran.jpg';
 import Ella from '../assets/Ella.jpeg';
 import Dasha from '../assets/Dasha.jpeg';
-import Weijie from '../assets/Weijie.jpg';
+import Weijie from '../assets/weijie.jpg';
 import Vijay from '../assets/vijay.png';
 import Will from '../assets/will.jpg';
 import Sathvik from '../assets/sathvik (3).png';
