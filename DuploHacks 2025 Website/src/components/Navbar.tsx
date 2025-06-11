@@ -51,8 +51,7 @@ export default function Navbar() {
         <nav className={`navBarWrapper${atTop ? ' thing' : ''}`} ref={navRef}>
             <div className="nav-left">
                 <Link to="/" onClick={() => setMenuOpen(false)}>
-                    <img src={duploLogo} alt="DuploHacks" className="nav-logo" />
-                    <span>DuploHacks</span>
+                    {/* <img src={duploLogo} alt="DuploHacks" className="nav-logo" /> */}
                 </Link>
             </div>
             <button 
