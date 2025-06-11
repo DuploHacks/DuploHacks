@@ -7,6 +7,10 @@ body, .team-page {
   overflow-x: hidden;
 }
 
+.team-page {
+  margin-top: 100px;
+}
+
 .team-header-group {
   text-align: center;
   margin-top: 32px;
