@@ -1,6 +1,7 @@
 import { useEffect, useState, useRef } from 'react';
 import '../styles/Navbar.css';
 import { Link } from 'react-router-dom';
+import duploLogo from '../assets/DuploHacksNoBackground.png';
 
 export default function Navbar() {
     const [atTop, setAtTop] = useState(true);
@@ -50,7 +51,7 @@ export default function Navbar() {
         <nav className={`navBarWrapper${atTop ? ' thing' : ''}`} ref={navRef}>
             <div className="nav-left">
                 <Link to="/" onClick={() => setMenuOpen(false)}>
-                    <img src="/src/assets/DuploHacksNoBackground.png" alt="DuploHacks" className="nav-logo" />
+                    <img src={duploLogo} alt="DuploHacks" className="nav-logo" />
                     <span>DuploHacks</span>
                 </Link>
             </div>

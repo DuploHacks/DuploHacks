@@ -4,6 +4,9 @@ import Sponsors from './components/sponsors';
 import Faq from './components/faq';
 import Contact from './components/contact';
 import About from './components/about';
+import pinIcon from './assets/pinicon.png';
+import calendarIcon from './assets/calendaricon.png';
+import timeIcon from './assets/timeicon.png';
 
 export default function Homepage() {
     return (
@@ -16,15 +19,15 @@ export default function Homepage() {
                     </div>
                     <div className="event-info">
                         <div className="event-location-container">
-                            <img className="icon" src="/src/assets/pinicon.png"/>
+                            <img className="icon" src={pinIcon} />
                             <span className="event-location">200 University Ave, E7</span>
                         </div>
                         <div className="event-details">
                             <div className="event-row">
-                                <img className="icon" src="/src/assets/calendaricon.png"/>
+                                <img className="icon" src={calendarIcon} />
                                 <span>October 10 - 12th, 2025</span>
                                 <span className="separator">|</span>
-                                <img className="icon" src="/src/assets/timeicon.png"/>
+                                <img className="icon" src={timeIcon} />
                                 <span>Applications Coming Soon</span>
                             </div>
                         </div>

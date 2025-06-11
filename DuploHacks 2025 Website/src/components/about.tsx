@@ -1,21 +1,21 @@
 import { useEffect, useState } from 'react';
 import '../styles/About.css';
 
+const collageImages = [
+    new URL('../assets/AboutMeCollage/Image1.jpg', import.meta.url).href,
+    new URL('../assets/AboutMeCollage/Image2.jpg', import.meta.url).href,
+    new URL('../assets/AboutMeCollage/Image3.jpg', import.meta.url).href,
+    new URL('../assets/AboutMeCollage/Image4.jpg', import.meta.url).href,
+    new URL('../assets/AboutMeCollage/Image5.jpg', import.meta.url).href,
+    new URL('../assets/AboutMeCollage/Image6.jpg', import.meta.url).href,
+    new URL('../assets/AboutMeCollage/Image7.jpg', import.meta.url).href,
+    new URL('../assets/AboutMeCollage/Image8.jpg', import.meta.url).href,
+    new URL('../assets/AboutMeCollage/Image9.jpg', import.meta.url).href,
+];
+
 const About = () => {
-    const filePrefix = '/src/assets/AboutMeCollage/'
-    const [currentImage, setCurrentImage] = useState(filePrefix + 'Image1.jpg');
     const [currentImageNum, setCurrentImageNum] = useState(0);
-    const collageImages = [
-        filePrefix + 'Image1.jpg',
-        filePrefix + 'Image2.jpg',
-        filePrefix + 'Image3.jpg',
-        filePrefix + 'Image4.jpg',
-        filePrefix + 'Image5.jpg',
-        filePrefix + 'Image6.jpg',
-        filePrefix + 'Image7.jpg',
-        filePrefix + 'Image8.jpg',
-        filePrefix + 'Image9.jpg'
-    ];
+    const [currentImage, setCurrentImage] = useState(collageImages[0]);
 
     useEffect(() => {
         const updateInterval = setInterval(() => {
@@ -59,4 +59,5 @@ const About = () => {
         </div>
     )
 }
-export default About
+
+export default About;

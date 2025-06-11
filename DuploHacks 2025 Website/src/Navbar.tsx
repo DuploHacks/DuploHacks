@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import './styles/Navbar.css';
+import duploLogo from './assets/DuploHacksNoBackground.png';
 import { Link } from 'react-router-dom';
 
 export default function Navbar() {
@@ -49,7 +50,7 @@ export default function Navbar() {
     return (
         <nav className={`navBarWrapper${atTop ? ' thing' : ''}`} ref={navRef}>
             <div className="nav-left">
-                <img src="/src/assets/DuploHacksNoBackground.png" alt="DuploHacks" className="nav-logo" />
+                <img src={duploLogo} alt="DuploHacks" className="nav-logo" />
                 <span>DuploHacks</span>
             </div>
             <button 
