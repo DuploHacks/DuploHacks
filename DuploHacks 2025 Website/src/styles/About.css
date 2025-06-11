@@ -40,7 +40,6 @@
     flex-direction: row;
     gap: 40px;
     margin-top: 20px;
-    background-color: red;
     /* Remove image group spacing */
 }
 .about-description {
