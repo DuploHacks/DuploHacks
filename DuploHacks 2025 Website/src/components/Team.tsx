@@ -1,69 +1,73 @@
 import React from 'react';
 import '../styles/Team.css';
 import Navbar from './Navbar';
-import Simrik from '../assets/Simrik.jpg';
-import Sehan from '../assets/Sehan.jpg';
-import Sarveshwar from '../assets/sarv - Sarveshwar Senthil Kumar.jpg';
-import OwenWu from '../assets/Owenwu.jpg';
-import Muhammud from '../assets/Muhammud.jpeg';
-import Megh from '../assets/Megh.jpeg';
-import John from '../assets/John.jpeg';
-import JasonTran from '../assets/Jason_Tran.jpg';
-import Ella from '../assets/Ella.jpeg';
-import Dasha from '../assets/Dasha.jpeg';
-import Weijie from '../assets/weijie.jpg';
-import Vijay from '../assets/vijay.png';
-import Will from '../assets/will.jpg';
-import Sathvik from '../assets/sathvik (3).png';
-import James from '../assets/James.png';
-import Maizah from '../assets/Maizah.png';
-import Gursaaz from '../assets/gursaaz.jpg';
-import Bowen from '../assets/bowen.png';
-import BillBasnet from '../assets/Bill Basnet.jpg';
+
+// Import images using the new path structure
+const images = {
+  Simrik: new URL('../assets/Simrik.jpg', import.meta.url).href,
+  Sehan: new URL('../assets/Sehan.jpg', import.meta.url).href,
+  Sarveshwar: new URL('../assets/sarv - Sarveshwar Senthil Kumar.jpg', import.meta.url).href,
+  OwenWu: new URL('../assets/Owenwu.jpg', import.meta.url).href,
+  Muhammud: new URL('../assets/Muhammud.jpeg', import.meta.url).href,
+  Megh: new URL('../assets/Megh.jpeg', import.meta.url).href,
+  John: new URL('../assets/John.jpeg', import.meta.url).href,
+  JasonTran: new URL('../assets/Jason_Tran.jpg', import.meta.url).href,
+  Ella: new URL('../assets/Ella.jpeg', import.meta.url).href,
+  Dasha: new URL('../assets/Dasha.jpeg', import.meta.url).href,
+  Weijie: new URL('../assets/weijie.jpg', import.meta.url).href,
+  Vijay: new URL('../assets/vijay.png', import.meta.url).href,
+  Will: new URL('../assets/will.jpg', import.meta.url).href,
+  Sathvik: new URL('../assets/sathvik (3).png', import.meta.url).href,
+  James: new URL('../assets/James.png', import.meta.url).href,
+  Maizah: new URL('../assets/Maizah.png', import.meta.url).href,
+  Gursaaz: new URL('../assets/gursaaz.jpg', import.meta.url).href,
+  Bowen: new URL('../assets/bowen.png', import.meta.url).href,
+  BillBasnet: new URL('../assets/Bill Basnet.jpg', import.meta.url).href,
+};
 
 const teamData = [
   {
     group: 'Co-Leads & Founders',
     members: [
-      { name: 'Jason Tran', img: JasonTran },
-      { name: 'Sathvik Haridasu', img: Sathvik },
-      { name: 'Simrik Silvas', img: Simrik },
+      { name: 'Jason Tran', img: images.JasonTran },
+      { name: 'Sathvik Haridasu', img: images.Sathvik },
+      { name: 'Simrik Silvas', img: images.Simrik },
     ],
   },
   {
     group: 'Web-Tech',
     members: [
-      { name: 'Vijay Shrivarshan Vijayaraja', img: Vijay },
-      { name: 'Haoshi (Owen) Wu', img: OwenWu },
-      { name: 'Sehan Munhir', img: Sehan },
-      { name: 'Bowen Shao', img: Bowen },
+      { name: 'Vijay Shrivarshan Vijayaraja', img: images.Vijay },
+      { name: 'Haoshi (Owen) Wu', img: images.OwenWu },
+      { name: 'Sehan Munhir', img: images.Sehan },
+      { name: 'Bowen Shao', img: images.Bowen },
     ],
   },
   {
     group: 'Finance',
     members: [
-      { name: 'Megh Patel', img: Megh },
-      { name: 'John Fu', img: John },
-      { name: 'Muhammad Ahmed', img: Muhammud },
-      { name: 'James Yang', img: James },
+      { name: 'Megh Patel', img: images.Megh },
+      { name: 'John Fu', img: images.John },
+      { name: 'Muhammad Ahmed', img: images.Muhammud },
+      { name: 'James Yang', img: images.James },
     ],
   },
   {
     group: 'Marketing/Design',
     members: [
-      { name: 'Bill Basnet', img: BillBasnet },
-      { name: 'Maizah Tanveer', img: Maizah },
-      { name: 'Gursaaz Gund', img: Gursaaz },
-      { name: 'William Lovegrove', img: Will },
+      { name: 'Bill Basnet', img: images.BillBasnet },
+      { name: 'Maizah Tanveer', img: images.Maizah },
+      { name: 'Gursaaz Gund', img: images.Gursaaz },
+      { name: 'William Lovegrove', img: images.Will },
     ],
   },
   {
     group: 'Logistics',
     members: [
-      { name: 'Dasha Turetska', img: Dasha },
-      { name: 'Ella Li', img: Ella },
-      { name: 'Sarveshwar Senthil Kumar', img: Sarveshwar },
-      { name: 'Weijie Wang', img: Weijie },
+      { name: 'Dasha Turetska', img: images.Dasha },
+      { name: 'Ella Li', img: images.Ella },
+      { name: 'Sarveshwar Senthil Kumar', img: images.Sarveshwar },
+      { name: 'Weijie Wang', img: images.Weijie },
     ],
   },
 ];
