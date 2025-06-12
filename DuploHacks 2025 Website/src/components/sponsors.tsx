@@ -1,4 +1,5 @@
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 import "../styles/Sponsors.css"
 import hackclubLogo from '../assets/hackclub.png';
 import codeCraftersLogo from '../assets/CodeCrafters.png';
@@ -6,13 +7,16 @@ import interviewCakeLogo from '../assets/interviewcake.png';
 import youthCreativityFundLogo from '../assets/youthcreativityfund.png';
 
 function Sponsors() {
+  const containerRef = useRef(null);
+  const isInView = useInView(containerRef, { once: true, margin: "-100px" });
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2,
-        delayChildren: 0.3
+        staggerChildren: 0.07,
+        delayChildren: 0.1
       }
     }
   };
@@ -23,7 +27,7 @@ function Sponsors() {
       y: 0,
       opacity: 1,
       transition: {
-        duration: 0.6
+        duration: 0.25
       }
     }
   };
@@ -34,13 +38,13 @@ function Sponsors() {
       scale: 1,
       opacity: 1,
       transition: {
-        duration: 0.5
+        duration: 0.18
       }
     },
     hover: {
       scale: 1.1,
       transition: {
-        duration: 0.2
+        duration: 0.15
       }
     }
   };
@@ -48,8 +52,9 @@ function Sponsors() {
   return (
     <motion.div
       className="sponsors-container"
+      ref={containerRef}
       initial="hidden"
-      animate="visible"
+      animate={isInView ? "visible" : "hidden"}
       variants={containerVariants}
     >
       {/* Decorative SVG Wave Transition */}
