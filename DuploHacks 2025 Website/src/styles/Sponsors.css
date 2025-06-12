@@ -1,9 +1,18 @@
+.sponsors-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 0;
+}
+
 .sponsors-grayheading {
   font-family: 'Martian Mono', 'serif';
   text-align: center;
   font-size: 20px;
   padding-top: 40px;
   color: #482a63;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .sponsors-heading {
@@ -13,7 +22,8 @@
   background: linear-gradient(90deg,#F9B5DC 44%, #A2B2F3 55%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .sponsor-tiers {
@@ -118,7 +128,8 @@
   justify-content: flex-start;
   min-height: 80px;
   margin-top: 6px;
-  gap: 8px;
+  gap: 32px;
+  padding: 2rem;
 }
 
 .sponsors-row {
@@ -126,7 +137,8 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 48px;
+  gap: 64px;
+  padding: 1rem;
 }
 
 .sponsors-row-bottom {
@@ -139,12 +151,24 @@
   border-radius: 24px;
   background: transparent;
   object-fit: contain;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+  transition: filter 0.3s ease;
+}
+
+.hackclub-logo:hover {
+  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.2));
 }
 
 .codecrafters-logo {
   height: 200px;
   width: 400px;
   object-fit: contain;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+  transition: filter 0.3s ease;
+}
+
+.codecrafters-logo:hover {
+  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.2));
 }
 
 .interviewcake-logo {
@@ -152,12 +176,24 @@
   width: 400px;
   object-fit: contain;
   border-radius: 32px;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+  transition: filter 0.3s ease;
+}
+
+.interviewcake-logo:hover {
+  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.2));
 }
 
 .youthcreativityfund-logo {
   height: 200px;
   width: 400px;
   object-fit: contain;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+  transition: filter 0.3s ease;
+}
+
+.youthcreativityfund-logo:hover {
+  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.2));
 }
 
 .sponsorsSection {
@@ -192,4 +228,14 @@
   .sponsors-heading {
     font-size: 60px;
   }
+}
+
+.sponsors-wave-divider {
+  position: relative;
+  top: -200px;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  line-height: 0;
+  background: transparent;
 }

@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { motion } from 'framer-motion';
 import '../styles/Team.css';
 import Navbar from './Navbar';
 
@@ -77,31 +78,75 @@ const Team = () => {
     window.scrollTo(0, 0);
   }, []);
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.5
+      }
+    }
+  };
+
   return (
-    <div className="team-page">
+    <motion.div 
+      className="team-page"
+      initial="hidden"
+      animate="visible"
+      variants={containerVariants}
+    >
       <Navbar />
-      <div className="team-header-group">
+      <motion.div className="team-header-group" variants={itemVariants}>
         <div className="team-label">[TEAM]</div>
         <div className="team-title">OUR TEAM</div>
-      </div>
+      </motion.div>
       <div className="team-groups">
         {teamData.map((group) => (
-          <div className="team-group" key={group.group}>
+          <motion.div 
+            className="team-group" 
+            key={group.group}
+            variants={itemVariants}
+          >
             <div className="team-group-label">[{group.group}]</div>
             <div className="team-members">
               {group.members.map((member) => (
-                <div className="team-member" key={member.name}>
+                <motion.div 
+                  className="team-member" 
+                  key={member.name}
+                  variants={itemVariants}
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 0.2 }}
+                >
                   <div className="team-member-img-wrapper">
-                    <img className="team-member-img" src={member.img} alt={member.name} />
+                    <img 
+                      className="team-member-img" 
+                      src={member.img} 
+                      alt={`${member.name} - DuploHacks Team Member`}
+                      loading="lazy"
+                      width="200"
+                      height="200"
+                      decoding="async"
+                    />
                   </div>
                   <div className="team-member-name">{member.name}</div>
-                </div>
+                </motion.div>
               ))}
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 };
 

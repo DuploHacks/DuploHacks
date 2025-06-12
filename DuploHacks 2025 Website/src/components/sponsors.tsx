@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import "../styles/Sponsors.css"
 import hackclubLogo from '../assets/hackclub.png';
 import codeCraftersLogo from '../assets/CodeCrafters.png';
@@ -5,35 +6,110 @@ import interviewCakeLogo from '../assets/interviewcake.png';
 import youthCreativityFundLogo from '../assets/youthcreativityfund.png';
 
 function Sponsors() {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.3
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.6
+      }
+    }
+  };
+
+  const logoVariants = {
+    hidden: { scale: 0.8, opacity: 0 },
+    visible: {
+      scale: 1,
+      opacity: 1,
+      transition: {
+        duration: 0.5
+      }
+    },
+    hover: {
+      scale: 1.1,
+      transition: {
+        duration: 0.2
+      }
+    }
+  };
+
   return (
-    <>
-      <div className="sponsors-grayheading">
+    <motion.div
+      className="sponsors-container"
+      initial="hidden"
+      animate="visible"
+      variants={containerVariants}
+    >
+      {/* Decorative SVG Wave Transition */}
+      <div className="sponsors-wave-divider">
+        <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style={{width: '100%', height: '180px', display: 'block'}}>
+          <path d="M0,80 C480,160 960,0 1440,80 L1440,120 L0,120 Z" fill="#240043" />
+        </svg>
+      </div>
+      <motion.div className="sponsors-grayheading" variants={itemVariants}>
         [thank you to]
-      </div>
+      </motion.div>
 
-      <div className="sponsors-heading">
+      <motion.div className="sponsors-heading" variants={itemVariants}>
         OUR SPONSORS
-      </div>
+      </motion.div>
 
-      <div className="sponsors-flex">
-        <div className="sponsors-row sponsors-row-top">
-          <a href="https://hackclub.com" target="_blank" rel="noopener noreferrer">
+      <motion.div className="sponsors-flex" variants={containerVariants}>
+        <motion.div className="sponsors-row sponsors-row-top" variants={itemVariants}>
+          <motion.a 
+            href="https://hackclub.com" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            variants={logoVariants}
+            whileHover="hover"
+          >
             <img className="sponsor-image hackclub-logo" src={hackclubLogo} alt="Hack Club" />
-          </a>
-          <a href="https://codecrafters.io" target="_blank" rel="noopener noreferrer">
+          </motion.a>
+          <motion.a 
+            href="https://codecrafters.io" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            variants={logoVariants}
+            whileHover="hover"
+          >
             <img className="sponsor-image codecrafters-logo" src={codeCraftersLogo} alt="CodeCrafters" />
-          </a>
-        </div>
-        <div className="sponsors-row sponsors-row-bottom">
-          <a href="https://www.interviewcake.com" target="_blank" rel="noopener noreferrer">
+          </motion.a>
+        </motion.div>
+        <motion.div className="sponsors-row sponsors-row-bottom" variants={itemVariants}>
+          <motion.a 
+            href="https://www.interviewcake.com" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            variants={logoVariants}
+            whileHover="hover"
+          >
             <img className="sponsor-image interviewcake-logo" src={interviewCakeLogo} alt="Interview Cake" />
-          </a>
-          <a href="https://youthcreativityfund.ca" target="_blank" rel="noopener noreferrer">
+          </motion.a>
+          <motion.a 
+            href="https://youthcreativityfund.ca" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            variants={logoVariants}
+            whileHover="hover"
+          >
             <img className="sponsor-image youthcreativityfund-logo" src={youthCreativityFundLogo} alt="Youth Creativity Fund" />
-          </a>
-        </div>
-      </div>
-    </>
+          </motion.a>
+        </motion.div>
+      </motion.div>
+    </motion.div>
   );
 }
+
 export default Sponsors;

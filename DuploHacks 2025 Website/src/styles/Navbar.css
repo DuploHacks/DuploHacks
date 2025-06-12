@@ -200,3 +200,43 @@
 .link:hover::after {
     width: 100%;
 }
+
+.logo-link {
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.logo-link:hover {
+    transform: scale(1.05);
+}
+
+.logo-button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+    outline: none;
+}
+
+.logo-button:hover {
+    transform: scale(1.05);
+}
+
+.logo-button:active {
+    transform: scale(0.95);
+}
+
+.nav-logo {
+    height: 50px;
+    width: auto;
+    transition: filter 0.3s ease;
+    pointer-events: none;
+}
+
+.logo-button:hover .nav-logo {
+    filter: brightness(1.1);
+}
