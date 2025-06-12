@@ -94,6 +94,16 @@
     font-size: 1.1rem;
     color: white;
     letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.animated-dots {
+    display: inline-block;
+    width: 24px;
+    text-align: left;
+    position: relative;
 }
 
 .event-details {
@@ -134,17 +144,32 @@
     padding: 0.75rem 2.5rem;
     border: none;
     border-radius: 2rem;
-    background: linear-gradient(90deg, #6A1AFF 0%, #FF1F8F 100%);
+    background: linear-gradient(90deg, #240043 0%, #8D36E9 50%, #ff0078 100%);
     color: white;
     font-family: 'Martian Mono', monospace;
     font-size: 1.2rem;
     cursor: pointer;
-    transition: transform 0.2s;
+    transition: all 0.3s ease;
     letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
 .sponsor-button:hover {
     transform: scale(1.05);
+    background: linear-gradient(90deg, #240043 0%, #9FB2F2 50%, #ff0078 100%);
+    box-shadow: 0 0 20px rgba(157, 178, 242, 0.3);
+}
+
+.sponsor-icon {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s ease;
+}
+
+.sponsor-button:hover .sponsor-icon {
+    transform: rotate(15deg);
 }
 
 /* Keep existing section styles */

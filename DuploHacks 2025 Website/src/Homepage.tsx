@@ -7,8 +7,22 @@ import About from './components/about';
 import pinIcon from './assets/pinicon.png';
 import calendarIcon from './assets/calendaricon.png';
 import timeIcon from './assets/timeicon.png';
+import { useEffect, useState } from 'react';
 
 export default function Homepage() {
+    const [dots, setDots] = useState('');
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setDots(prev => {
+                if (prev.length >= 3) return '';
+                return prev + '.';
+            });
+        }, 500);
+
+        return () => clearInterval(interval);
+    }, []);
+
     return (
         <div className="homepageBody">
             <Navbar />
@@ -20,7 +34,10 @@ export default function Homepage() {
                     <div className="event-info">
                         <div className="event-location-container">
                             <img className="icon" src={pinIcon} />
-                            <span className="event-location">To Be Announced Soon...</span>
+                            <span className="event-location">
+                                To Be Announced Soon
+                                <span className="animated-dots">{dots}</span>
+                            </span>
                         </div>
                         <div className="event-details">
                             <div className="event-row">
@@ -31,7 +48,12 @@ export default function Homepage() {
                                 <span>Applications Coming Soon</span>
                             </div>
                         </div>
-                        <button className="sponsor-button" onClick={() => window.location.href = 'mailto:hello@duplohacks.ca'}>Sponsor Us?</button>
+                        <button className="sponsor-button" onClick={() => window.location.href = 'mailto:hello@duplohacks.ca'}>
+                            <svg className="sponsor-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                            </svg>
+                            Sponsor Us?
+                        </button>
                     </div>
                 </div>
             </section>
