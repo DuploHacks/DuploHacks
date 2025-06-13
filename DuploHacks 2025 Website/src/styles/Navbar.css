@@ -115,13 +115,6 @@
     }
 }
 
-.navBarWrapper.thing {
-    padding-left: 55px;
-    padding-right: 55px;
-    border-bottom: 5px dashed rgba(238, 0, 255, 0.067);
-    background: transparent;
-    backdrop-filter: none;
-}
 .navBarWrapper {
     position: fixed;
     top: 0;
@@ -139,7 +132,17 @@
     background-repeat:repeat-x;
     z-index: 1000;
     border-bottom: none;
-    transition: all 0.2s;
+    transition: all 0.2s, opacity 0.3s;
+    opacity: 0.85;
+}
+
+.navBarWrapper.thing {
+    padding-left: 55px;
+    padding-right: 55px;
+    border-bottom: 5px dashed rgba(238, 0, 255, 0.067);
+    background: transparent;
+    backdrop-filter: none;
+    opacity: 1;
 }
 
 .nav-left {

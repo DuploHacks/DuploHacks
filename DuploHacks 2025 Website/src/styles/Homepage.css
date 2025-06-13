@@ -154,12 +154,14 @@
     display: flex;
     align-items: center;
     gap: 8px;
+    text-decoration: none;
 }
 
-.sponsor-button:hover {
+.sponsor-button:hover, .sponsor-button:focus {
     transform: scale(1.05);
     background: linear-gradient(90deg, #240043 0%, #9FB2F2 50%, #ff0078 100%);
     box-shadow: 0 0 20px rgba(157, 178, 242, 0.3);
+    text-decoration: none;
 }
 
 .sponsor-icon {
