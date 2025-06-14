@@ -91,7 +91,7 @@ const Faq = () => {
     return (
         <div className="faq-container">
             <div className="centered-grey-heading">
-                [ FREQUENTLY ASKED QUESTIONS ]
+                [FREQUENTLY ASKED QUESTIONS]
             </div>
             <div className="faq-heading">
                 FAQ

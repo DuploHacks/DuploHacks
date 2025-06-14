@@ -9,10 +9,14 @@
 .sponsors-grayheading {
   font-family: 'Martian Mono', 'serif';
   text-align: center;
-  font-size: 20px;
+  font-size: 25px;
   padding-top: 40px;
-  color: #482a63;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(90deg, #d3b4e8 0%, #b4e8e4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 8px rgba(178, 117, 233, 0.4), 0 0 15px rgba(178, 117, 233, 0.2);
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 .sponsors-heading {
