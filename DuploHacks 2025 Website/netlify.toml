@@ -22,4 +22,9 @@
   pretty_urls = true
 
 [build.processing.images]
-  compress = true 
+  compress = true
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200 

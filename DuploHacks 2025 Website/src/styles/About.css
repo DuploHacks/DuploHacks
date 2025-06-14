@@ -158,3 +158,10 @@
     }
 }
 
+.font-wait {
+  visibility: hidden;
+}
+.font-loaded .font-wait {
+  visibility: visible;
+}
+

@@ -51,7 +51,7 @@ const About = () => {
         <div className="about-container">
             <div className="about-header-group">
                 <div className="about-title-label">[what is duplohacks?]</div>
-                <div className="about-title">
+                <div className="about-title font-wait">
                     About <span className="about-duplohacks-gradient">DuploHacks</span>
                 </div>
             </div>

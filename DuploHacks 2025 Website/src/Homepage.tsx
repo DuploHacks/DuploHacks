@@ -8,6 +8,7 @@ import pinIcon from './assets/pinicon.png';
 import calendarIcon from './assets/calendaricon.png';
 import timeIcon from './assets/timeicon.png';
 import { useEffect, useState } from 'react';
+import { motion } from 'framer-motion';
 
 export default function Homepage() {
     const [dots, setDots] = useState('');
@@ -24,7 +25,12 @@ export default function Homepage() {
     }, []);
 
     return (
-        <div className="homepageBody">
+        <motion.div
+            className="homepageBody"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: 'easeOut' }}
+        >
             <Navbar />
             <section className="heroSection">
                 <div className="hero-content">
@@ -70,6 +76,6 @@ export default function Homepage() {
                 <Faq />
                 <Contact />
             </section>
-        </div>
+        </motion.div>
     );
 }
