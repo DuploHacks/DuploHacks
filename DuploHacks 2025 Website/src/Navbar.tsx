@@ -5,12 +5,23 @@ import { Link } from 'react-router-dom';
 
 export default function Navbar() {
     const [atTop, setAtTop] = useState(true);
+    const [navBarOpacity, setNavBarOpacity] = useState(1);
     const [menuOpen, setMenuOpen] = useState(false);
     const navRef = useRef<HTMLDivElement>(null);
+    const navBarTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
     useEffect(() => {
         const handleScroll = () => {
             setAtTop(window.scrollY <= 150);
+            setNavBarOpacity(0.5);
+
+            if (navBarTimeoutRef.current) {
+                clearTimeout(navBarTimeoutRef.current);
+            }
+
+            navBarTimeoutRef.current = setTimeout(() => {
+                setNavBarOpacity(0.85);
+            }, 150);
         };
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
@@ -48,7 +59,7 @@ export default function Navbar() {
     }, [menuOpen]);
 
     return (
-        <nav className={`navBarWrapper${atTop ? ' thing' : ''}`} ref={navRef}>
+        <nav className={`navBarWrapper${atTop ? ' attop' : ''}`} ref={navRef} style = { {opacity: navBarOpacity} }>
             <div className="nav-left">
                 <img src={duploLogo} alt="DuploHacks" className="nav-logo" />
             </div>
