@@ -40,7 +40,7 @@ export default function Homepage() {
                     </div>
                     <div className="event-info">
                         <div className="event-location-container">
-                            <img className="icon" src={pinIcon} />
+                            <img className="icon" src={pinIcon} loading="lazy" />
                             <span className="event-location">
                                 To Be Announced Soon
                                 <span className="animated-dots">{dots}</span>
@@ -48,10 +48,10 @@ export default function Homepage() {
                         </div>
                         <div className="event-details">
                             <div className="event-row">
-                                <img className="icon" src={calendarIcon} />
+                                <img className="icon" src={calendarIcon} loading="lazy" />
                                 <span>October 10 - 12th, 2025</span>
                                 <span className="separator">|</span>
-                                <img className="icon" src={timeIcon} />
+                                <img className="icon" src={timeIcon} loading="lazy" />
                                 <span>Applications Coming Soon</span>
                             </div>
                         </div>

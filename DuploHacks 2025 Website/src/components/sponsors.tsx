@@ -80,7 +80,7 @@ function Sponsors() {
             variants={logoVariants}
             whileHover="hover"
           >
-            <img className="sponsor-image hackclub-logo" src={hackclubLogo} alt="Hack Club" />
+            <img className="sponsor-image hackclub-logo" src={hackclubLogo} alt="Hack Club" loading="lazy" />
           </motion.a>
           <motion.a 
             href="https://codecrafters.io" 
@@ -89,7 +89,7 @@ function Sponsors() {
             variants={logoVariants}
             whileHover="hover"
           >
-            <img className="sponsor-image codecrafters-logo" src={codeCraftersLogo} alt="CodeCrafters" />
+            <img className="sponsor-image codecrafters-logo" src={codeCraftersLogo} alt="CodeCrafters" loading="lazy" />
           </motion.a>
         </motion.div>
         <motion.div className="sponsors-row sponsors-row-bottom" variants={itemVariants}>
@@ -100,7 +100,7 @@ function Sponsors() {
             variants={logoVariants}
             whileHover="hover"
           >
-            <img className="sponsor-image interviewcake-logo" src={interviewCakeLogo} alt="Interview Cake" />
+            <img className="sponsor-image interviewcake-logo" src={interviewCakeLogo} alt="Interview Cake" loading="lazy" />
           </motion.a>
           <motion.a 
             href="https://youthcreativityfund.ca" 
@@ -109,7 +109,7 @@ function Sponsors() {
             variants={logoVariants}
             whileHover="hover"
           >
-            <img className="sponsor-image youthcreativityfund-logo" src={youthCreativityFundLogo} alt="Youth Creativity Fund" />
+            <img className="sponsor-image youthcreativityfund-logo" src={youthCreativityFundLogo} alt="Youth Creativity Fund" loading="lazy" />
           </motion.a>
         </motion.div>
       </motion.div>
