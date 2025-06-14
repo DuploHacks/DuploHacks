@@ -177,12 +177,13 @@
 
 /* Keep existing section styles */
 .aboutSection {
-    height: 100vh;
+    height: auto;
+    padding-left: 60px;
+    padding-right: 60px;
     width: 100vw;
     background-image: url("../assets/AboutSectionBackgroundImage.png");
     background-size: contain;
     background-position: top;
-    padding: 0 60px;
 }
 
 .sponsorsSection {
