@@ -8,6 +8,7 @@
 }
 .about-header-group {
     margin-bottom: 20px;
+    padding-left: 60px;
 }
 .about-title-label {
   font-family: 'Martian Mono', 'serif';
@@ -22,8 +23,9 @@
     margin-bottom: 10px;
     border-bottom: 2px dotted #8D36E9;
     width: fit-content;
+    display: inline-block;
     padding-bottom: 8px;
-    letter-spacing: 0.04em;
+    letter-spacing: 0.01em;
     font-weight: bold;
     line-height: 1.1;
 }
@@ -33,24 +35,26 @@
     -webkit-text-fill-color: transparent;
     background-clip: text;
     font-weight: bold;
-    letter-spacing: 0.04em;
+    letter-spacing: 0.01em;
 }
 .about-content-group {
     display: flex;
     flex-direction: row;
     gap: 40px;
     margin-top: 20px;
-    /* Remove image group spacing */
+    padding-left: 60px;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 .about-description {
     font-family: 'Martian Mono', monospace;
     color: #fff;
     font-size: 1.5rem;
-    max-width: 900px;
-    line-height: 1.18;
+    max-width: 700px;
+    line-height: 1.4;
     background: none;
     font-weight: 400;
-    letter-spacing: 0.01em;
+    letter-spacing: -0.1em;
     white-space: pre-line;
 }
 .about-description-main {
@@ -153,3 +157,4 @@
         font-size: 0.9rem;
     }
 }
+

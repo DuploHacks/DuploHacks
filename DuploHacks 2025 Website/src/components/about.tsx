@@ -59,11 +59,8 @@ const About = () => {
             <div className="about-content-group">
                 <div className="about-description">
                     <span className="about-description-main">
-                        DuploHacks is a hackathon by teenagers, for teenagers. Born out of our founders' experiences
-                        with repetitive hackathon formats, we decided to shake things up and bring something fresh to
-                        the scene. Our unique format features a main theme at kickoff, followed by a surprise second
-                        theme revealed halfway through. This challenges hackers to adapt quickly and rewards those
-                        who can connect their projects across both themes
+                    DuploHacks is a hackathon by teenagers, for teenagers. Born from our founders' frustration with repetitive formats, we created something fresh: a dual-theme challenge.
+                    We start with one theme at kickoff, then reveal a surprise second theme halfway through. This tests your ability to adapt quickly and connect ideas across both themes. Ready for a hackathon that's anything but predictable?
                     </span>
                 </div>
                 
