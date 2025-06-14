@@ -33,6 +33,7 @@ export default function Homepage() {
         >
             <Navbar />
             <section className="heroSection">
+                <div className="hero-background-animation"></div>
                 <div className="hero-content">
                     <div className="titleSection">
                         <p className="title">DuploHacks</p>
