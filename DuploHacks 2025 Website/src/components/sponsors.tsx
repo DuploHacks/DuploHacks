@@ -64,7 +64,7 @@ function Sponsors() {
         </svg>
       </div>
       <motion.div className="sponsors-grayheading" variants={itemVariants}>
-        THANK YOU TO
+        [THANK YOU TO]
       </motion.div>
 
       <motion.div className="sponsors-heading" variants={itemVariants}>
