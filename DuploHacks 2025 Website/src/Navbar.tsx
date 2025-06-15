@@ -76,8 +76,8 @@ export default function Navbar() {
             <div className={`nav-right${menuOpen ? ' open' : ''}`}> 
                 <a className="link" href="#about" onClick={() => setMenuOpen(false)}>about</a>
                 <Link className="link" to="/team" onClick={() => setMenuOpen(false)}>team</Link>
-                <Link className="link" to="/#sponsors" onClick={() => setMenuOpen(false)}>sponsors</Link>
-                <Link className="link" to="/#faq" onClick={() => setMenuOpen(false)}>faq</Link>
+                <a className="link" href="#sponsors" onClick={() => setMenuOpen(false)}>sponsors</a>
+                <a className="link" href="#faq" onClick={() => setMenuOpen(false)}>faq</a>
             </div>
         </nav>
     );

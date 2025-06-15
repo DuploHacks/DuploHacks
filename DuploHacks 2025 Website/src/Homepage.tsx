@@ -1,4 +1,5 @@
 import './styles/Homepage.css';
+import ScrollToHashElement from './components/ScrollToHashElement'
 import Navbar from './Navbar';
 import Sponsors from './components/sponsors';
 import Faq from './components/faq';
@@ -31,6 +32,7 @@ export default function Homepage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: 'easeOut' }}
         >
+            <ScrollToHashElement />
             <Navbar />
             <section className="heroSection">
                 <div className="hero-background-animation"></div>
