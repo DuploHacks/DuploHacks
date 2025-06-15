@@ -30,45 +30,45 @@ const teamData = [
   {
     group: 'Co-Leads & Founders',
     members: [
-      { name: 'Jason Tran', img: images.JasonTran },
-      { name: 'Sathvik Haridasu', img: images.Sathvik },
-      { name: 'Simrik Silvas', img: images.Simrik },
+      { name: 'Jason<br/>Tran', img: images.JasonTran },
+      { name: 'Sathvik<br/>Haridasu', img: images.Sathvik },
+      { name: 'Simrik<br/>Shivas', img: images.Simrik },
     ],
   },
   {
     group: 'Web-Tech',
     members: [
-      { name: 'Vijay Shrivarshan Vijayaraja', img: images.Vijay },
-      { name: 'Haoshi (Owen) Wu', img: images.OwenWu },
-      { name: 'Sehan Munhir', img: images.Sehan },
-      { name: 'Bowen Shao', img: images.Bowen },
+      { name: 'Vijay<br/>Shrivarshan Vijayaraja', img: images.Vijay },
+      { name: 'Haoshi (Owen)<br/>Wu', img: images.OwenWu },
+      { name: 'Sehan<br/>Munhir', img: images.Sehan },
+      { name: 'Bowen<br/>Shao', img: images.Bowen },
     ],
   },
   {
     group: 'Finance',
     members: [
-      { name: 'Megh Patel', img: images.Megh },
-      { name: 'John Fu', img: images.John },
-      { name: 'Muhammad Ahmed', img: images.Muhammud },
-      { name: 'James Yang', img: images.James },
+      { name: 'Megh<br/>Patel', img: images.Megh },
+      { name: 'John<br/>Fu', img: images.John },
+      { name: 'Muhammad<br/>Ahmed', img: images.Muhammud },
+      { name: 'James<br/>Yang', img: images.James },
     ],
   },
   {
     group: 'Marketing/Design',
     members: [
-      { name: 'Bill Basnet', img: images.BillBasnet },
-      { name: 'Maizah Tanveer', img: images.Maizah },
-      { name: 'Gursaaz Gund', img: images.Gursaaz },
-      { name: 'William Lovegrove', img: images.Will },
+      { name: 'Bill<br/>Basnet', img: images.BillBasnet },
+      { name: 'Maizah<br/>Tanveer', img: images.Maizah },
+      { name: 'Gursaaz<br/>Gund', img: images.Gursaaz },
+      { name: 'William<br/>Lovegrove', img: images.Will },
     ],
   },
   {
     group: 'Logistics',
     members: [
-      { name: 'Dasha Turetska', img: images.Dasha },
-      { name: 'Ella Li', img: images.Ella },
-      { name: 'Sarveshwar Senthil Kumar', img: images.Sarveshwar },
-      { name: 'Weijie Wang', img: images.Weijie },
+      { name: 'Dasha<br/>Turetska', img: images.Dasha },
+      { name: 'Ella<br/>Li', img: images.Ella },
+      { name: 'Sarveshwar<br/>Senthil Kumar', img: images.Sarveshwar },
+      { name: 'Weijie<br/>Wang', img: images.Weijie },
     ],
   },
 ];
@@ -108,7 +108,7 @@ const Team = () => {
     >
       <Navbar />
       <motion.div className="team-header-group" variants={itemVariants}>
-        <div className="team-label">[TEAM]</div>
+        <div className="about-title-label">[TEAM]</div>
         <div className="team-title">OUR TEAM</div>
       </motion.div>
       <div className="team-groups">
@@ -118,7 +118,7 @@ const Team = () => {
             key={group.group}
             variants={itemVariants}
           >
-            <div className="team-group-label">[{group.group}]</div>
+            <div className="about-title-label">[{group.group}]</div>
             <div className="team-members">
               {group.members.map((member) => (
                 <motion.div 
@@ -139,7 +139,10 @@ const Team = () => {
                       decoding="async"
                     />
                   </div>
-                  <div className="team-member-name">{member.name}</div>
+                  <div 
+                    className="team-member-name"
+                    dangerouslySetInnerHTML={{ __html: member.name }}
+                  />
                 </motion.div>
               ))}
             </div>
