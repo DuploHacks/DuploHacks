@@ -49,7 +49,7 @@
 
 .team-members {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: center;
   gap: 40px;
   box-shadow: none !important; /* Ensure no shadow on this container */
@@ -67,7 +67,7 @@
   border-radius: 0;
   transition: width 0.3s ease-in-out, height 0.3s ease-in-out, border-radius 0.3s ease-in-out, background-color 0.3s ease-in-out, transform 0.3s ease-in-out, padding 0.3s ease-in-out; /* Control specific transitions, exclude box-shadow */
   background-color: transparent;
-  box-shadow: none !important; /* Enforce removal of initial subtle shadow */
+  box-shadow: none; /* Removed !important */
 }
 
 .team-member:hover {
@@ -94,9 +94,9 @@
   justify-content: center;
   position: relative;
   flex-shrink: 0;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; /* Keep this for other transitions like width/height/margin */
   background-color: transparent;
-  box-shadow: none;
+  box-shadow: none; /* Removed !important */
 }
 
 .team-member:hover .team-member-img-wrapper {
@@ -265,14 +265,19 @@
 
 @media (max-width: 600px) {
   .team-title {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
   }
   .team-members {
-    gap: 20px;
+    flex-wrap: nowrap;
+    gap: 30px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    -webkit-overflow-scrolling: touch;
   }
   .team-member {
     width: 120px;
     height: 170px;
+    flex-shrink: 0;
   }
   .team-member:hover {
     width: 280px; /* Adjusted expanded width for small screens */

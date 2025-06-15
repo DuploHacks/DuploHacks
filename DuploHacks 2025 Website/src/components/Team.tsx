@@ -69,9 +69,9 @@ const teamData = [
         name: 'Vijay<br/>Shrivarshan Vijayaraja', 
         img: images.Vijay,
         facts: [
-          '• Front End Developer',
+          '• Front End ',
           '• Specializes in React and Node.js',
-          '• Passionate about clean code'
+          '• Passionate about Vibe Coding'
         ],
         linkedin: 'https://www.linkedin.com/in/vijay-shrivarshan-placeholder'
       },
