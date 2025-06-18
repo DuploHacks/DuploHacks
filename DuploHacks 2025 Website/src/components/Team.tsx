@@ -246,10 +246,20 @@ const teamData = [
 
 const Team = () => {
   const [hoveredMember, setHoveredMember] = useState<string | null>(null);
+  const [activeMember, setActiveMember] = useState<string | null>(null);
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  // Helper to detect mobile
+  const isMobile = () => window.innerWidth <= 600;
+
+  const handleMemberClick = (name: string) => {
+    if (isMobile()) {
+      setActiveMember(activeMember === name ? null : name);
+    }
+  };
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -298,72 +308,105 @@ const Team = () => {
           >
             <div className="about-title-label">[{group.group}]</div>
             <div className="team-members">
-              {group.members.map((member) => (
-                <motion.div 
-                  className="team-member" 
-                  key={member.name}
-                  onHoverStart={() => setHoveredMember(member.name)}
-                  onHoverEnd={() => setHoveredMember(null)}
-                  variants={{
-                    initial: { boxShadow: "none" },
-                    hover: { boxShadow: "0 8px 32px rgba(141, 54, 233, 0.3)" }
-                  }}
-                  initial="initial"
-                  whileHover="hover"
-                  transition={{ duration: 0.3 }}
-                >
-                  <div className="team-member-img-wrapper">
-                    <img 
-                      className="team-member-img" 
-                      src={member.img} 
-                      alt={`${member.name} - DuploHacks Team Member`}
-                      loading="lazy"
-                      width="200"
-                      height="200"
-                      decoding="async"
-                    />
-                  </div>
-                  <AnimatePresence>
-                    {hoveredMember === member.name && (
-                      <motion.div 
-                        className="team-member-expanded-content"
-                        initial="hidden"
-                        animate="visible"
-                        exit="hidden"
-                        variants={expandedContentVariants}
-                      >
-                        <div 
-                          className="team-member-name expanded"
-                          dangerouslySetInnerHTML={{ __html: member.name }}
-                        />
-                        <div className="team-member-facts">
-                          {member.facts.map((fact, index) => (
-                            <p key={index} className="expanded-fact">{fact}</p>
-                          ))}
+              {group.members.map((member) => {
+                const isActive = activeMember === member.name;
+                const showExpanded = (hoveredMember === member.name && !isMobile()) || isActive;
+                return (
+                  <motion.div 
+                    className={`team-member${isActive ? ' active' : ''}`}
+                    key={member.name}
+                    onHoverStart={() => !isMobile() && setHoveredMember(member.name)}
+                    onHoverEnd={() => !isMobile() && setHoveredMember(null)}
+                    onClick={() => handleMemberClick(member.name)}
+                    variants={{
+                      initial: { boxShadow: "none" },
+                      hover: { boxShadow: "0 8px 32px rgba(141, 54, 233, 0.3)" }
+                    }}
+                    initial="initial"
+                    whileHover="hover"
+                    transition={{ duration: 0.3 }}
+                  >
+                    <div className="team-member-img-wrapper">
+                      <img 
+                        className="team-member-img" 
+                        src={member.img} 
+                        alt={`${member.name} - DuploHacks Team Member`}
+                        loading="lazy"
+                        width="200"
+                        height="200"
+                        decoding="async"
+                      />
+                    </div>
+                    {isMobile() ? (
+                      showExpanded && (
+                        <div className="team-member-expanded-content">
+                          <div 
+                            className="team-member-name expanded"
+                            dangerouslySetInnerHTML={{ __html: member.name }}
+                          />
+                          <div className="team-member-facts">
+                            {member.facts.map((fact, index) => (
+                              <p key={index} className="expanded-fact">{fact}</p>
+                            ))}
+                          </div>
+                          {member.linkedin && (
+                            <a 
+                              href={member.linkedin} 
+                              target="_blank" 
+                              rel="noopener noreferrer"
+                              className="linkedin-button"
+                            >
+                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2zM4 6a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"/>
+                              </svg>
+                            </a>
+                          )}
                         </div>
-                        {member.linkedin && (
-                          <a 
-                            href={member.linkedin} 
-                            target="_blank" 
-                            rel="noopener noreferrer"
-                            className="linkedin-button"
+                      )
+                    ) : (
+                      <AnimatePresence>
+                        {showExpanded && (
+                          <motion.div 
+                            className="team-member-expanded-content"
+                            initial="hidden"
+                            animate="visible"
+                            exit="hidden"
+                            variants={expandedContentVariants}
                           >
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2zM4 6a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"/>
-                            </svg>
-                          </a>
+                            <div 
+                              className="team-member-name expanded"
+                              dangerouslySetInnerHTML={{ __html: member.name }}
+                            />
+                            <div className="team-member-facts">
+                              {member.facts.map((fact, index) => (
+                                <p key={index} className="expanded-fact">{fact}</p>
+                              ))}
+                            </div>
+                            {member.linkedin && (
+                              <a 
+                                href={member.linkedin} 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="linkedin-button"
+                              >
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2zM4 6a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"/>
+                                </svg>
+                              </a>
+                            )}
+                          </motion.div>
                         )}
-                      </motion.div>
+                      </AnimatePresence>
                     )}
-                  </AnimatePresence>
-                  {!hoveredMember && (
-                    <div 
-                      className="team-member-name"
-                      dangerouslySetInnerHTML={{ __html: member.name }}
-                    />
-                  )}
-                </motion.div>
-              ))}
+                    {!showExpanded && (
+                      <div 
+                        className="team-member-name"
+                        dangerouslySetInnerHTML={{ __html: member.name }}
+                      />
+                    )}
+                  </motion.div>
+                );
+              })}
             </div>
           </motion.div>
         ))}

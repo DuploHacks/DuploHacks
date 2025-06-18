@@ -276,12 +276,13 @@
   }
   .team-member {
     width: 120px;
-    height: 170px;
+    height: auto;
+    overflow: visible;
     flex-shrink: 0;
   }
   .team-member:hover {
     width: 280px; /* Adjusted expanded width for small screens */
-    height: 170px;
+    height: auto;
     padding: 10px;
   }
   .team-member-img-wrapper {
@@ -316,9 +317,46 @@
     font-size: 2rem;
   }
   .team-member {
-    padding: 15px;
+    padding: 10px;
+    height: auto;
+    overflow: visible;
   }
   .team-member-name {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
+    text-align: center;
+    word-break: break-word;
+    white-space: normal;
+    margin-top: 8px;
+    margin-bottom: 0;
+  }
+  .team-member-name.expanded {
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 6px;
+    margin-top: 0;
+    width: 100%;
+    word-break: break-word;
+    white-space: normal;
+  }
+  .team-member-expanded-content {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    opacity: 1 !important;
+    padding: 0;
+    margin-top: 4px;
+    width: 100%;
+  }
+  .team-member.active .team-member-expanded-content {
+    display: flex !important;
+    opacity: 1 !important;
+  }
+  .expanded-fact {
+    font-size: 0.7rem;
+    padding-left: 0;
+    text-align: center;
+    margin-bottom: 2px;
   }
 } 
