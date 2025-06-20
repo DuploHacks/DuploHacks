@@ -9,14 +9,13 @@ const images = {
   Sehan: new URL('../assets/Sehan.webp', import.meta.url).href,
   Sarveshwar: new URL('../assets/sarv - Sarveshwar Senthil Kumar.webp', import.meta.url).href,
   OwenWu: new URL('../assets/Owenwu.jpg', import.meta.url).href,
-  Muhammud: new URL('../assets/Muhammud.jpg', import.meta.url).href,
+  Muhammad: new URL('../assets/Muhammud.jpg', import.meta.url).href,
   Megh: new URL('../assets/Megh.webp', import.meta.url).href,
   John: new URL('../assets/John.webp', import.meta.url).href,
   JasonTran: new URL('../assets/Jason_Tran.webp', import.meta.url).href,
   Ella: new URL('../assets/Ella.webp', import.meta.url).href,
   Dasha: new URL('../assets/Dasha.webp', import.meta.url).href,
   Weijie: new URL('../assets/weijie.webp', import.meta.url).href,
-  Vijay: new URL('../assets/vijay1.png', import.meta.url).href,
   Will: new URL('../assets/will.webp', import.meta.url).href,
   Sathvik: new URL('../assets/sathvik (3).webp', import.meta.url).href,
   James: new URL('../assets/James.webp', import.meta.url).href,
@@ -65,16 +64,6 @@ const teamData = [
   {
     group: 'Web-Tech',
     members: [
-      { 
-        name: 'Vijay<br/>Shrivarshan Vijayaraja', 
-        img: images.Vijay,
-        facts: [
-          '• Front End ',
-          '• Specializes in React and Node.js',
-          '• Passionate about Vibe Coding'
-        ],
-        linkedin: 'https://www.linkedin.com/in/vijay-shrivarshan-placeholder'
-      },
       { 
         name: 'Haoshi (Owen)<br/>Wu', 
         img: images.OwenWu,
@@ -131,14 +120,14 @@ const teamData = [
         linkedin: 'https://www.linkedin.com/in/john-fu-placeholder'
       },
       { 
-        name: 'Muhammud<br/>Ahmed', 
-        img: images.Muhammud,
+        name: 'Muhammad<br/>Ahmed', 
+        img: images.Muhammad,
         facts: [
           '• Finance Team Member',
           '• Expert in financial modeling',
           '• Strong analytical skills'
         ],
-        linkedin: 'https://www.linkedin.com/in/muhammud-ahmed-placeholder'
+        linkedin: 'https://www.linkedin.com/in/muhammad-ahmed-placeholder'
       },
       { 
         name: 'James<br/>Yang', 
