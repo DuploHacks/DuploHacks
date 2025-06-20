@@ -103,7 +103,7 @@ const teamData = [
         name: 'Megh<br/>Patel', 
         img: images.Megh,
         facts: [
-          '• Finance Lead',
+          '• Finance Team Member',
           '• Expert in budget management',
           '• Strategic financial planning'
         ],
@@ -193,7 +193,7 @@ const teamData = [
         name: 'Dasha<br/>Turetska', 
         img: images.Dasha,
         facts: [
-          '• Logistics Lead',
+          '• Logistics Team Member',
           '• Event planning expert',
           '• Detail-oriented organizer'
         ],
