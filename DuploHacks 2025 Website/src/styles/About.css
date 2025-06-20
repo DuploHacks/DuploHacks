@@ -201,14 +201,13 @@
     }
 
     .about-image-photo {
-        width: 220px;
-        
-        height: 190px;
-        max-width: 90vw;
-        aspect-ratio: 1/1;
-        border-radius: 18px;
+        width: 100vw;
+        max-width: 100vw;
+        height: auto;
+        aspect-ratio: 16/9;
+        border-radius: 0;
         display: block;
-        margin: 0 auto;
+        margin: 0;
         object-fit: cover;
     }
 
