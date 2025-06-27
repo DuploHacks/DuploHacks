@@ -1,11 +1,13 @@
-import React, { useEffect, useState, useRef } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import '../styles/Navbar.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import duploLogo from '../assets/DuploHacksNoBackground.png';
 
 export default function Navbar() {
     const [atTop, setAtTop] = useState(true);
     const [menuOpen, setMenuOpen] = useState(false);
     const navRef = useRef<HTMLDivElement>(null);
+    const navigate = useNavigate();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -46,13 +48,27 @@ export default function Navbar() {
         };
     }, [menuOpen]);
 
+    const handleLogoClick = (e: React.MouseEvent) => {
+        e.preventDefault();
+        setMenuOpen(false);
+        navigate('/');
+        window.scrollTo(0, 0);
+    };
+
     return (
         <nav className={`navBarWrapper${atTop ? ' thing' : ''}`} ref={navRef}>
             <div className="nav-left">
-                <Link to="/" onClick={() => setMenuOpen(false)}>
-                    <img src="/src/assets/DuploHacksNoBackground.png" alt="DuploHacks" className="nav-logo" />
-                    <span>DuploHacks</span>
-                </Link>
+                <button 
+                    onClick={handleLogoClick}
+                    className="logo-button"
+                    aria-label="Go to home page"
+                >
+                    <img 
+                        src={duploLogo} 
+                        alt="DuploHacks" 
+                        className="nav-logo" 
+                    />
+                </button>
             </div>
             <button 
                 className={`nav-hamburger${menuOpen ? ' open' : ''}`} 

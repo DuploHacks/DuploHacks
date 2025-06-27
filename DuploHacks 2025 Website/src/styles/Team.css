@@ -1,121 +1,362 @@
-body, .team-page {
+@import "./About.css";
+
+.team-page {
+  background-color: #240043; /* Background color for the team page */
   min-height: 100vh;
-  width: 100vw;
-  background: linear-gradient(180deg, #240043 0%, #4a008c 100%);
-  color: #fff;
-  font-family: 'Martian Mono', monospace;
-  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers content horizontally for the page */
+  padding-bottom: 40px; /* Reduced from 60px */
 }
 
 .team-header-group {
-  text-align: center;
-  margin-top: calc(92px + 2rem);
-  margin-bottom: 24px;
+  margin-bottom: 40px; /* Reduced from 60px */
+  padding-top: 60px; /* Reduced from 100px */
+  text-align: center; /* This centers the [TEAM] text and any other inline/inline-block children */
 }
-.team-label {
-  color: #b3b3b3;
-  font-size: 1.2rem;
-  letter-spacing: 0.15em;
-  margin-bottom: 8px;
-}
+
 .team-title {
   font-family: 'Bauhaus 93', serif;
-  font-size: 3.5rem;
-  background: linear-gradient(90deg, #feb5db 0%, #9FB2F2 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  font-size: 4.2rem;
+  color: #fff;
+  margin-bottom: 10px;
+  border-bottom: 2px dotted #8D36E9;
+  width: fit-content;
+  display: inline-block;
+  padding-bottom: 8px;
+  letter-spacing: 0.01em;
   font-weight: bold;
-  letter-spacing: 0.04em;
-  margin-bottom: 16px;
+  line-height: 1.1;
 }
+
 .team-groups {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 40px;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 40px;
+  box-shadow: none !important; /* Ensure no shadow on this container */
 }
+
 .team-group {
-  margin-bottom: 0px;
-}
-.team-group-label {
-  color: #b3b3b3;
-  font-size: 1.3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
-  margin-bottom: 12px;
-  letter-spacing: 0.12em;
+  box-shadow: none !important; /* Ensure no shadow on this container */
 }
+
 .team-members {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: center;
-  gap: 32px 48px;
+  gap: 40px;
+  box-shadow: none !important; /* Ensure no shadow on this container */
 }
+
 .team-member {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 160px;
-  min-width: 0;
+  text-align: center;
+  width: 200px;
+  height: 250px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0;
+  transition: width 0.3s ease-in-out, height 0.3s ease-in-out, border-radius 0.3s ease-in-out, background-color 0.3s ease-in-out, transform 0.3s ease-in-out, padding 0.3s ease-in-out; /* Control specific transitions, exclude box-shadow */
+  background-color: transparent;
+  box-shadow: none; /* Removed !important */
 }
+
+.team-member:hover {
+  width: 480px;
+  height: 250px;
+  border-radius: 12px;
+  background-color: rgba(36, 0, 67, 0.95);
+  transform: translateY(-5px);
+  flex-direction: row;
+  justify-content: flex-start;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
 .team-member-img-wrapper {
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
-  border: 2.5px dashed #fff;
+  width: 200px; /* Initial size */
+  height: 200px;
+  border-radius: 50%; /* Keep circular image */
+  overflow: hidden; /* Keep overflow hidden for the circular image */
+  border: 4px solid #8D36E9;
+  margin-bottom: 15px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 8px;
-  background: rgba(0,0,0,0.15);
+  position: relative;
+  flex-shrink: 0;
+  transition: all 0.3s ease-in-out; /* Keep this for other transitions like width/height/margin */
+  background-color: transparent;
+  box-shadow: none; /* Removed !important */
 }
+
+.team-member:hover .team-member-img-wrapper {
+  width: 100px;
+  height: 100px;
+  margin-right: 20px;
+  margin-bottom: 0; /* Remove bottom margin on hover */
+}
+
 .team-member-img {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  background: #222;
-  min-width: 0;
+  filter: grayscale(0.2);
+  transition: filter 0.3s ease;
 }
+
+.team-member-img-wrapper:hover .team-member-img {
+  filter: grayscale(0);
+}
+
 .team-member-name {
-  color: #fff;
-  font-size: 1.1rem;
-  text-align: center;
-  margin-top: 4px;
   font-family: 'Martian Mono', monospace;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 10px;
+  transition: opacity 0.3s ease;
 }
+
+.team-member:hover .team-member-name:not(.expanded) {
+  opacity: 0; /* Hide initial name on hover */
+}
+
+.team-member-expanded-content {
+  display: none; /* Hidden by default */
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  flex-grow: 1;
+  justify-content: center;
+  pointer-events: auto;
+  padding: 0;
+  opacity: 0; /* Managed by Framer Motion initially, but good to have a default */
+}
+
+.team-member:hover .team-member-expanded-content {
+  display: flex; /* Display on hover */
+}
+
+.team-member-name.expanded {
+  font-family: 'Martian Mono', monospace;
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  margin-top: 0;
+  text-align: left;
+  width: 100%;
+}
+
+.team-member-facts {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.expanded-fact {
+  font-family: 'Martian Mono', monospace;
+  color: #ccc;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  position: relative;
+  padding-left: 0; /* Remove padding as bullet is now in content */
+  margin: 0;
+  list-style: none !important;
+  list-style-type: none !important;
+  list-style-position: outside !important;
+}
+
+.expanded-fact::before {
+  /* This entire block is now removed as bullet is in content */
+}
+
+.linkedin-button {
+  background-color: #0077B5; /* LinkedIn blue */
+  color: #fff; /* Ensure icon color is white */
+  padding: 5px; /* Adjusted padding for icon */
+  border-radius: 5px;
+  text-decoration: none;
+  font-family: 'Martian Mono', monospace;
+  font-size: 0; /* Hide text, as it's replaced by SVG */
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+  margin-top: auto;
+  align-self: flex-start;
+  display: flex; /* Use flexbox to center SVG */
+  align-items: center;
+  justify-content: center;
+  width: 34px; /* Set a fixed width for the button */
+  height: 34px; /* Set a fixed height for the button */
+}
+
+.linkedin-button:hover {
+  background-color: #005582;
+}
+
+.linkedin-button svg {
+  fill: #fff; /* Explicitly set SVG fill color to white */
+}
+
+/* This override explicitly ensures about-title-label is centered on Team page */
+/* It targets the specific context of Team page to override the default left-alignment from About.css */
+.team-header-group .about-title-label,
+.team-group .about-title-label {
+  text-align: center; 
+  margin-bottom: 20px;
+}
+
+/* Responsive adjustments */
 @media (max-width: 900px) {
+  .team-title {
+    font-size: 3.5rem;
+  }
+  .team-groups {
+    padding: 0 20px;
+    gap: 40px;
+  }
+  .team-member {
+    width: 150px;
+    height: 200px;
+  }
+  .team-member:hover {
+    width: 320px; /* Adjusted expanded width for medium screens */
+    height: 200px;
+    padding: 15px;
+  }
+  .team-member-img-wrapper {
+    width: 150px;
+    height: 150px;
+  }
+  .team-member:hover .team-member-img-wrapper {
+    width: 80px;
+    height: 80px;
+    margin-right: 15px;
+  }
+  .team-member-name {
+    font-size: 1rem;
+  }
+  .team-member-name.expanded {
+    font-size: 1.1rem;
+  }
+  .expanded-fact {
+    font-size: 0.8rem;
+    padding-left: 0;
+  }
+  .linkedin-button {
+    font-size: 0; /* Hide text */
+    padding: 4px; /* Adjusted padding */
+    width: 30px; /* Adjusted size */
+    height: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .team-title {
+    font-size: 2.8rem;
+  }
   .team-members {
-    gap: 24px 16px;
+    flex-wrap: nowrap;
+    gap: 30px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    -webkit-overflow-scrolling: touch;
   }
   .team-member {
     width: 120px;
-    min-width: 0;
+    height: auto;
+    overflow: visible;
+    flex-shrink: 0;
+  }
+  .team-member:hover {
+    width: 280px; /* Adjusted expanded width for small screens */
+    height: auto;
+    padding: 10px;
   }
   .team-member-img-wrapper {
-    width: 90px;
-    height: 90px;
+    width: 120px;
+    height: 120px;
   }
-  .team-member-img {
+  .team-member:hover .team-member-img-wrapper {
     width: 70px;
     height: 70px;
-    min-width: 0;
+    margin-right: 10px;
+  }
+  .team-member-name {
+    font-size: 0.9rem;
+  }
+  .team-member-name.expanded {
+    font-size: 1rem;
+  }
+  .expanded-fact {
+    font-size: 0.75rem;
+    padding-left: 0;
+  }
+  .linkedin-button {
+    font-size: 0; /* Hide text */
+    padding: 3px; /* Adjusted padding */
+    width: 28px; /* Adjusted size */
+    height: 28px;
   }
 }
-@media (max-width: 600px) {
+
+@media (max-width: 480px) {
   .team-title {
     font-size: 2rem;
   }
-  .team-group-label {
-    font-size: 1rem;
+  .team-member {
+    padding: 10px;
+    height: auto;
+    overflow: visible;
   }
-  .team-header-group {
-    margin-top: calc(92px + 2rem);
-    margin-bottom: 8px;
+  .team-member-name {
+    font-size: 0.85rem;
+    text-align: center;
+    word-break: break-word;
+    white-space: normal;
+    margin-top: 8px;
+    margin-bottom: 0;
   }
-  .team-groups {
-    gap: 18px;
+  .team-member-name.expanded {
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 6px;
+    margin-top: 0;
+    width: 100%;
+    word-break: break-word;
+    white-space: normal;
+  }
+  .team-member-expanded-content {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    opacity: 1 !important;
+    padding: 0;
+    margin-top: 4px;
+    width: 100%;
+  }
+  .team-member.active .team-member-expanded-content {
+    display: flex !important;
+    opacity: 1 !important;
+  }
+  .expanded-fact {
+    font-size: 0.7rem;
+    padding-left: 0;
+    text-align: center;
+    margin-bottom: 2px;
   }
 } 

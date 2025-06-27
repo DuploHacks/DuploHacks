@@ -1,7 +1,10 @@
 import React from 'react'
 import '../styles/Contact.css';
-import Instagram from "../assets/Icons/Instagram.png";
-import LinkedIn from "../assets/Icons/LinkedIn.png";
+import Instagram from "../assets/Icons/instagram.png";
+import LinkedIn from "../assets/Icons/linkedin.png";
+import Website from "../assets/Icons/website.png";
+import Mail from "../assets/Icons/mail.png";
+import Logo from "../assets/DuploHacksNoBackground.png";
 
 const Contact = () => {
     return (
@@ -12,23 +15,38 @@ const Contact = () => {
                     REACH OUT TO US AT <span className="centered-white-bold-text"> HELLO@DUPLOHACKS.CA</span>
                 </div>
             </div>
-            <hr className="footer-divider"/>
-            <div className="footer-bar">
+            <footer className="footer-container">
                 <div className="footer-left">
-                    <span className="white-link">Made with 💜 by the DuploHacks Team</span>
+                    <img src={Logo} alt="DuploHacks Logo" className="footer-logo" />
+                    <div>
+                        <div className="footer-title">DuploHacks</div>
+                        <div className="footer-powered">Made with 💜 by the DuploHacks Team</div>
+                    </div>
                 </div>
                 <div className="footer-center">
-                    <a href="https://www.instagram.com/duplohacks_/" target="_blank" rel="noopener noreferrer">
-                        <img src={Instagram} alt="Instagram" className="footer-icon" />
-                    </a>
-                    <a href="https://www.linkedin.com/company/duplohacks" target="_blank" rel="noopener noreferrer">
-                        <img src={LinkedIn} alt="LinkedIn" className="footer-icon" />
-                    </a>
+                    <div className="footer-copyright">© 2025 DuploHacks. All rights reserved.</div>
+                    <div className="footer-socials">
+                        <img src={Website} alt="Website" />
+                        <img src={Instagram} alt="Instagram" />
+                        <img src={LinkedIn} alt="LinkedIn" />
+                        <img src={Mail} alt="Mail" />
+                    </div>
                 </div>
                 <div className="footer-right">
-                    <span className="footer-copyright">© DuploHacks 2025</span>
+                    <div className="footer-links">
+                        <a href="#about">About</a>
+                        <a href="https://duplohacks.ca/team">Team</a>
+                        <a href="#sponsors">Sponsors</a>
+                        <a href="#faq">FAQs</a>
+
+                    </div>
+                    <div className="footer-links-bottom">
+                        <a href="#">Sponsor Us</a>
+                        <a href="#">Code Of Conduct</a>
+                        <a href="#">Privacy Policy</a>
+                    </div>
                 </div>
-            </div>
+            </footer>
         </>
     )
 }
