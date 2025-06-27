@@ -197,9 +197,10 @@
     margin-top: 0;
     padding-top: 0;
     width: 100vw;
-    background-image: url("../assets/ContactBackground.png");
-    background-size: cover;
+    background-image: url("../assets/ContactBackground2.png");
+    background-size: contain;
     background-position: bottom;
+    background-repeat: repeat-x;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;

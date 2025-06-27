@@ -75,7 +75,7 @@ const teamData = [
         linkedin: 'https://www.linkedin.com/in/haoshi-wu-weewoo14/'
       },
       { 
-        name: 'Sehan<br/>Munhir', 
+        name: 'Sehan<br/>Munir', 
         img: images.Sehan,
         facts: [
           '• Front End Developer',
