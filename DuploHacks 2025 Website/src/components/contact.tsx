@@ -1,7 +1,8 @@
 import React from 'react'
 import '../styles/Contact.css';
-import Instagram from "../assets/Icons/Instagram.png";
-import LinkedIn from "../assets/Icons/LinkedIn.png";
+import '../styles/Fonts.css';
+import Instagram from "../assets/Icons/instagram.png";
+import LinkedIn from "../assets/Icons/linkedin.png";
 import Website from "../assets/Icons/website.png";
 import Mail from "../assets/Icons/mail.png";
 import Logo from "../assets/DuploHacksNoBackground.png";
@@ -12,7 +13,7 @@ const Contact = () => {
             <div className="heading-container">
                 <div className="footer-heading">STILL HAVE A QUESTION?</div>
                 <div className="centered-white-text">
-                    REACH OUT TO US AT <span className="centered-white-bold-text"> HELLO@DUPLOHACKS.CA</span>
+                    REACH OUT TO US AT <a href="mailto:HELLO@DUPLOHACKS.CA"><button className="centered-white-bold-text"> HELLO@DUPLOHACKS.CA</button></a>
                 </div>
             </div>
             <footer className="footer-container">
@@ -26,10 +27,10 @@ const Contact = () => {
                 <div className="footer-center">
                     <div className="footer-copyright">© 2025 DuploHacks. All rights reserved.</div>
                     <div className="footer-socials">
-                        <img src={Website} alt="Website" />
-                        <img src={Instagram} alt="Instagram" />
-                        <img src={LinkedIn} alt="LinkedIn" />
-                        <img src={Mail} alt="Mail" />
+                        <a href="https://duplohacks.ca/"><img src={Website} alt="Website" /></a>
+                        <a target="_blank" href="https://www.instagram.com/duplohacks_/"><img src={Instagram} alt="Instagram" /></a>
+                        <a target="_blank" href="https://www.linkedin.com/company/duplohacks/"><img src={LinkedIn} alt="LinkedIn" /></a>
+                        <a href="mailto:HELLO@DUPLOHACKS.CA"><img src={Mail} alt="Mail" /></a>
                     </div>
                 </div>
                 <div className="footer-right">
@@ -42,8 +43,11 @@ const Contact = () => {
                     </div>
                     <div className="footer-links-bottom">
                         <a href="#">Sponsor Us</a>
+                        {/*
                         <a href="#">Code Of Conduct</a>
                         <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        */}
                     </div>
                 </div>
             </footer>
