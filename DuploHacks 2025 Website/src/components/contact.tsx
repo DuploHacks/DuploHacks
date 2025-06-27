@@ -2,7 +2,7 @@ import React from 'react'
 import '../styles/Contact.css';
 import Instagram from "../assets/Icons/Instagram.png";
 import LinkedIn from "../assets/Icons/LinkedIn.png";
-import Website from "../assets/Icons/Website.png";
+import Website from "../assets/Icons/website.png";
 import Mail from "../assets/Icons/mail.png";
 import Logo from "../assets/DuploHacksNoBackground.png";
 
