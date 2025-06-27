@@ -63,7 +63,6 @@ const About = () => {
                     We start with one theme at kickoff, then reveal a surprise second theme halfway through. This tests your ability to adapt quickly and connect ideas across both themes. Ready for a hackathon that's anything but predictable?
                     </span>
                 </div>
-                
                 <div className="about-image-group">
                     <AnimatePresence mode="wait">
                         <motion.img
