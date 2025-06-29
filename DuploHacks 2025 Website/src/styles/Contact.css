@@ -305,9 +305,6 @@
     }
     .centered-white-text, .centered-white-bold-text {
         font-size: 1rem;
-        padding-top: 0px;
-        padding-bottom: 10px;
-        display: block;
     }
     .Icons {
         flex-direction: column;
