@@ -6,14 +6,6 @@ import path from 'path'
 export default defineConfig({
   plugins: [react()],
   assetsInclude: ['**/*.jpg', '**/*.jpeg', '**/*.png', '**/*.JPG'],
-  build: {
-    assetsInlineLimit: 0,
-    rollupOptions: {
-      output: {
-        assetFileNames: 'assets/[name][extname]'
-      }
-    }
-  },
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
