@@ -175,6 +175,34 @@
     transform: rotate(15deg);
 }
 
+.jukebox-credit {
+    margin-top: 1rem;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+    text-align: center;
+    font-family: 'generalFont', sans-serif;
+}
+
+.jukebox-credit a {
+    color: #8D36E9;
+    text-decoration: none;
+    transition: color 0.2s ease;
+    font-weight: 500;
+}
+
+.jukebox-credit a:hover {
+    color: #a66ae9;
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .jukebox-credit {
+        font-size: 0.85rem;
+        padding: 0 1rem;
+        line-height: 1.5;
+    }
+}
+
 /* Keep existing section styles */
 .aboutSection {
     height: auto;
