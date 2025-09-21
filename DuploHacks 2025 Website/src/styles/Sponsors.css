@@ -243,3 +243,33 @@
   line-height: 0;
   background: transparent;
 }
+
+.sponsors-thankyou {
+  text-align: center;
+  margin-top: 2rem;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 1.6;
+  padding: 0 1rem;
+}
+
+.sponsors-thankyou a {
+  color: #8D36E9;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  font-weight: 500;
+}
+
+.sponsors-thankyou a:hover {
+  color: #a66ae9;
+  text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .sponsors-thankyou {
+    font-size: 1rem;
+    margin-top: 1.5rem;
+  }
+}

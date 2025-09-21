@@ -66,6 +66,9 @@ export default function Homepage() {
                             </svg>
                             Sponsor Us?
                         </a>
+                        <p className="jukebox-credit">
+                            Special thanks to <a href="https://www.jukeboxprint.com/custom-stickers" target="_blank" rel="noopener noreferrer">custom stickers</a> by Jukebox
+                        </p>
                     </div>
                 </div>
             </section>
